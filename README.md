@@ -5,7 +5,9 @@ your-markdown-fellow - Your-Markdown-Fellow
 
 # Desc
 "Your-Markdown-Fellow" is the prototype of my own Markdown-Editor. 
-Originally part of my project-management software [Your-All-In-One](https://github.com/das-praktische-schreinerlein/your-all-in-one) its now an stand-alone project. 
+Originally part of my project-management software [Your-All-In-One](https://github.com/das-praktische-schreinerlein/your-all-in-one) its now an stand-alone project.
+ 
+A demo can be found at [http://your-all-in-one.de/ymf/](http://your-all-in-one.de/ymf/).
 
 # Installation
 Quite simple: download, build, run
