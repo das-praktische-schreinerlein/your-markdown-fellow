@@ -1,0 +1,84 @@
+/** 
+ * software for projectmanagement and documentation
+ * 
+ * @FeatureDomain                Collaboration 
+ * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
+ * @category                     collaboration
+ * @copyright                    Copyright (c) 2014, Michael Schreiner
+ * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*****************************************
+ *****************************************
+ * page-elements
+ *****************************************
+ *****************************************/
+@media print {
+    #ymf-wysiwyg-box, #ymf-preview-box {
+        display: none !important;
+    }
+
+    #ymf-wysiwyg-print {
+        text-align: left;
+        display: block;
+        float: left;
+        width: 100%;
+        height: auto;
+        position: inherit;
+        left: auto;
+        margin-left: 0;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid #cbe8f6;
+        border-radius: 10px;
+    }
+
+    #ymf-wysiwyg-print img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #ymf-wysiwyg-print svg:not([class]) {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #ymf-wysiwyg-print div.mermaid {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.jsh-md-container-footer {
+        left: 20px;
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media print and (orientation: landscape) {
+    #ymf-wysiwyg-print {
+        width: 1150px;
+    }
+
+    div.jsh-md-container-footer {
+        width: 1128px;
+    }
+}
+
+@media print and (orientation: portrait) {
+    #ymf-wysiwyg-print {
+        width: 640px;
+    }
+
+    div.jsh-md-container-footer {
+        width: 618px;
+    }
+}
+

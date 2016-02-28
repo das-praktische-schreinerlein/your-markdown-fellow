@@ -1,0 +1,35 @@
+{
+  "name": "ymf",
+  "description": "YourMarkdownFellow",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Michael Schreiner",
+      "email": "michael.schreiner@your-it-fellow.de",
+      "homepage": "http://www.your-it-fellow.de"
+    }
+  ],
+  "homepage": "http://www.your-all-in-one.de",
+  "dependencies": {
+    "ace-builds": "v1.2.0",
+    "find-and-replace-dom-text": "0.4.3",
+    "highlightjs": "8.4.0",
+    "jquery": "1.11.1",
+    "jquery-lang-js": "#be9519db371f0f3131db13b357b9e54f2629df31",
+    "jquery-ui": "1.10.4",
+    "js-deflate": "johan/js-deflate#256a5c4d274b75fa0b35532319d3d893b204dbca",
+    "marked": "das-praktische-schreinerlein/marked#0.3.3-yaio",
+    "mermaid": "knsv/mermaid#0.5.7",
+    "slimbox2": "das-praktische-schreinerlein/slimbox#2.05-yaio",
+    "strapdown": "das-praktische-schreinerlein/strapdown#0.4.1-yaio",
+    "toastr": "CodeSeven/toastr#2.1.0"
+  },
+  "exportsOverride": {
+    "x": {
+      "js": "**/*.js",
+      "css": "**/*.css"
+    }
+  },
+  "private": "true",
+  "devDependencies": {}
+}

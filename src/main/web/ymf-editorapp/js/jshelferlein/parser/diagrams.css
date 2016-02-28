@@ -1,0 +1,130 @@
+/** 
+ * software for projectmanagement and documentation
+ * 
+ * @FeatureDomain                Collaboration 
+ * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
+ * @category                     collaboration
+ * @copyright                    Copyright (c) 2014, Michael Schreiner
+ * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*****************************************
+ *****************************************
+ * flowcharts (graph)
+ *****************************************
+ *****************************************/
+svg g.cluster rect {
+    fill: #CAF1F7;
+}
+
+/*****************************************
+ *****************************************
+ * sequence-diagram (sequence)
+ *****************************************
+ *****************************************/
+
+/******************************************
+ ******************************************
+ * diagram
+ ******************************************
+ ******************************************/
+div.jsh-mermaid, div.jshplantuml{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.jsh-mermaid svg, div.jshplantuml img, img.jsf-plantuml {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*****************************************
+ *****************************************
+ * layout
+ *****************************************
+ *****************************************/
+.mermaid {
+    width: auto
+}
+
+div.mermaid {
+}
+
+div.mermaid svg {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div.mermaid-source {
+    display: none;
+}
+
+div.jshmindmap {
+}
+
+div.jshmindmap embed {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div.jshmindmap-source {
+    display: none;
+}
+
+div.jshplantuml {
+}
+
+div.jshplantuml img, div.jshplantuml svg {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div.jshplantuml-source {
+    display: none;
+}
+
+div.servicesmermaid div, div.servicesjshmindmap div, div.servicesjshplantuml div {
+    padding: 5px;
+}
+
+div.servicesmermaid div a, div.servicesjshmindmap div a, div.servicesjshplantuml div a {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.42857;
+    width: auto;
+    padding: 5px;
+}
+
+div.jsh-md-box svg:not([class]) {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+div.jsh-mermaid svg:not([class]) {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+div.jsh-mermaid {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+

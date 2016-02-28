@@ -1,0 +1,12 @@
+/.idea
+/.settings
+/bower
+/node
+/node_modules
+/src/main/generated-resources
+/tmp
+/target
+/vendors/js
+/vendors/css
+/.project
+/.classpath

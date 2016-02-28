@@ -1,0 +1,88 @@
+/*! jsh-0.1.0 */
+
+@media print {
+    .jsh-text-toggler {
+        display: none !important;
+    }
+
+    .jsh-block-toggler {
+        display: none !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * diagram-elements
+     *****************************************
+     *****************************************/
+    div.mermaid-source {
+        display: none !important;
+    }
+
+    div.jshmindmap {
+        display: none !important;
+    }
+
+    div.jshmindmap-source {
+        display: block !important;
+    }
+
+    div.servicesmermaid, div.servicesjshmindmap, div.servicesjshplantuml {
+        display: none !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * markdown-styles
+     *****************************************
+     *****************************************/
+    /*****************************************
+     * boxes
+     *****************************************/
+    .jsh-md-container {
+        display: block !important;
+    }
+
+    /*****************************************
+     * toggler
+     *****************************************/
+    div.jsh-md-togglerparent {
+        display: none !important;
+    }
+
+    /*****************************************
+     * footer
+     *****************************************/
+    div.jsh-md-container-footer {
+        display: block;
+        float: bottom;
+        position: fixed;
+        left: 0;
+        margin: 0 auto;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    div.jsh-md-pagebreak-before, div.md-container-jsf-md-pagebreak-before {
+        page-break-before: always !important;
+    }
+
+    div.jsh-md-pagebreak-after, div.md-container-jsf-md-pagebreak-after {
+        page-break-after: always !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * formatter-elements
+     *****************************************
+     *****************************************/
+    pre {
+        max-height: none;
+        /* show all whitespaces */
+        white-space: pre-wrap;
+        overflow: visible;
+    }
+}

@@ -1,0 +1,245 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.jsh-icon-arrow-down {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: 0px -21px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-arrow-right {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -16px -53px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-arrow-up {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: 0px 0px;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-calendar {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -85px 0px;
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-checkbox-off {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -37px 0px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-checkbox-on {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -37px -16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-checkbox-round-off {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: 0px -37px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-checkbox-round-on {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -16px -37px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-create {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -32px -37px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-delete {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -53px 0px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-expand-off {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -53px -16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-expand-on {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -53px -32px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-file {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: 0px -53px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-folder {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -21px 0px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-minus {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -32px -53px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-notepad {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -48px -53px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-ok {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -69px 0px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-plus {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -69px -16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-print {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -69px -32px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-toggler-off {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -69px -48px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-toggler-on {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: 0px -69px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-toggler2-off {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -16px -69px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-toggler2-on {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -32px -69px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-upnp {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -48px -69px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-warning {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -16px -21px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
+.jsh-icon-web {
+  background-repeat: no-repeat;
+  background-image: url(jsh-icons-sprite.png);
+  background-position: -64px -69px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: top;
+}

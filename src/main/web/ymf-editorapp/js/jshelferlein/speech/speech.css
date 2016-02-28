@@ -1,0 +1,60 @@
+/** 
+ * software for projectmanagement and documentation
+ * 
+ * @FeatureDomain                Collaboration 
+ * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
+ * @category                     collaboration
+ * @copyright                    Copyright (c) 2014, Michael Schreiner
+ * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*****************************************
+ *****************************************
+ * speech-styles
+ *****************************************
+ *****************************************/
+#jsh-ss-info {
+    font-size: 16px;
+}
+
+.jsh-ss-textarea-final {
+    width: 100%;
+    clear: both;
+    color: black;
+    padding-top: 3px;
+}
+
+#jsh-sr-info {
+    font-size: 16px;
+}
+
+#jsh-sr-div-start {
+    float: right;
+}
+
+#jsh-sr-results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+}
+
+#jsh-sr-textarea-final {
+    width: 100%;
+    clear: both;
+    color: black;
+    padding-top: 3px;
+}
+
+#jsh-sr-span-interim {
+    width: 100%;
+    color: gray;
+    clear: both;
+    padding-top: 3px;
+}

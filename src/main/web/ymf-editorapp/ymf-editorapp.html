@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>YMF - Your-Markdown-Fellow - Wysiwyg-Editor</title>
+
+    <!-- styles: reset -->
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-reset.resetversion.css"/>
+
+    <!-- styles: vendors -->
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-app-vendors.vendorversion.css"/>
+
+    <!-- styles: ymf-explorer -->
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-app-dist.appversion.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="../dist/ymf-app-print.appversion.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/jsh-icons-sprite.appversion.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-icons-sprite.appversion.css"/>
+
+    <!-- scripts: vendors -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-vendors.vendorversion.js"></script>
+    <!-- scripts: mermaid needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8"
+            src="../dist/ymf-app-vendors.vendorversion/mermaid/mermaid.full.js"></script>
+    <!-- scripts: Markdown-Editor+Formatter needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-vendors.vendorversion/ace/ace.js"></script>
+    <!-- scripts: freemind needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8"
+            src="../dist/ymf-app-vendors.vendorversion/freemind-flash/flashobject.js"></script>
+
+    <!-- scripts: ymf-editorapp -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-dist.appversion.js"></script>
+
+    <style type="text/css">
+    @media screen {
+        body {
+            overflow: hidden;
+        }
+    }
+    </style>
+</head>
+
+<body>
+<div align="center" class="page-div-center">
+    <!-- Hauptseite-->
+    <div class="pageContent" id="pageContent">
+
+        <!-- Content -->
+        <div class="blockContent" id="blockContent">
+            <div class="content" id="content">
+                <div class="txt-content" id="txt-content">
+
+                    <!-- Context -->
+                    <div class="content">
+                        <!-- Page: Content -->
+                        <div id="ymf-workspace-box" class="hidden">
+                            <textarea id="ymf-workspace-content" class="ymf-workspace-content-desc">
+# Your-Markdown-Fellow sagt Guten Tag :-)
+Schön das Du hierher gefunden hast!!!
+
+Solltest du nach einem einfachen Online-Markdown-Editor mit mächtigen Features gesucht haben:
+
+**Hier bist du Richtig**
+
+YMF bietet Dir eine Vielzahl an Möglichkeiten bei (so hoffe ich) einfacher Bedienung :-)
+
+Also viel Spaß!!!
+
+
+PS: Anbei noch eine kurze Einführung in die Möglichkeiten - mehr Beispiele findest Du unter "Hilfe"
+
+<!---TOC --->
+
+----------------------------
+
+# Überschrift Ebene 1
+Das hier ist ganz normaler Fließtext.
+- Aufzählung Ebene 1
+  - Aufzählung Unterpunkt Ebene2 mit [Link + Label](http://daringfireball.net/projects/markdown/syntax) oder auch ein interner Link zur [ymf-Spielwiese](ymf:SysPlay1).
+
+## Überschrift Ebene 2
+Ein schönes Feature ist der integrierte Diagramm-Editor.
+- Mermaid-Sequenz-Diagramme
+- Mermaid-Prozess-Diagramme
+- Mermaid-Gantt-Diagramme
+```mermaid
+gantt
+    title Urlaubsplanung Sommer 2015
+    dateFormat  DD.MM.YYYY
+
+    section Urlaub1
+    Alpen1               :alpen1     , 01.07.2015     , 7d
+    Alpen2               :alpen2     , after alpen1   , 7d
+
+    section Urlaub/Ferien
+    Alpen Hüttentour     :alpen3     , after alpen2     , 6d
+    Sachsen              :sachsen    , after alpen3 , 3d
+    Ferienende Schule    :holend     , 27.08.2015     , 1d
+    Ötztal               :alpen4     , after sachsen    , 5d
+```
+- PlantUML-Wireframing
+```ymfplantuml
+@startuml
+salt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  "Enter text here   "
+  ^This is a droplist^
+}
+@enduml
+```
+- PlantUML-Class-Diagramm
+
+### Überschrift Ebene 3
+So kann man Code-Blöcke oder ähnliches einbinden.
+```
+Masterplan
+  System
+     Default
+```
+Das schöne ist, dass ein automatisches Syntaxhighlighting erfolgt, wenn er die Sprache erkennt.
+```
+#!/bin/bash
+// activate elements after 1 second
+setTimeout(function() {
+    // activate speech recognition and others
+    initLanguageSupport();
+    a = a + 1;
+```
+
+#### Überschrift Ebene 4
+
+Und auch die Einbindung von Bildern ist ganz einfach möglich :-)
+
+![Projektexplorer](/examples/help/hilfe-screen-projektexplorer-uebersicht.png "Übersicht Projektexplorer")
+
+Und immer wieder gerne gesehen: *Tabellen*
+
+Head1 | Head2 | Head3
+----|----|----
+Column1 | Column2 | Column3
+
+Soweit zu den Standard-Markdown-Features. Aber es gibt noch mehr Erweiterungen :-)
+
+----------------------------
+
+<!---STYLE li:jsh-md-no-list-bullet--->
+
+<!---BOX--->
+# Syntax-Erweiterungen <!---TOGGLER thatsit,text--->
+<!---CONTAINER thatsit--->
+<!---STYLE p:jsh-md-text-center--->
+Text center
+
+<!---/STYLE p:jsh-md-text-center--->
+
+- Spalte1 Ue:|:text
+- Spalte2 Ue:|:text
+- Spalte3 Ue:|:text
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX ymf-md-background-info--->
+### Box mit Hintergrundfarbe info <!---TOGGLER management,icon--->
+<!---CONTAINER management--->
+<!---STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+- Spalte1 Ue:|:text
+- Spalte2 Ue:|:text
+- Spalte3 Ue:|:text
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+<!---/STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX ymf-md-background-info--->
+### Box mit Hintergrundfarbe info und anderem Icon <!---TOGGLER management2,icon2--->
+<!---CONTAINER management2--->
+<!---STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+<!---/STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX.INFO Der Infoname--->
+Bla Blub
+
+<!---/BOX.INFO--->
+
+<!---BOX.ALERT Der Alertname--->
+Bla Blub
+
+<!---/BOX.ALERT--->
+
+<!---BOX.WARN Der Warnname--->
+Bla Blub
+
+<!---/BOX.WARN--->
+
+Und so kann man ganz einfach an alle Listen des Styles "ymf-md-list-horiz" einen Texttoggler anhaengen :-)
+<!---TOGGLER.AFTER ul:jsh-md-list-horiz,text--->
+
+### Checklisten
+Für ganz strukturierte Leute gibt es einfache farbige Checklisten:
+- **Aufgabenliste**
+    - [OFFEN] - Aufgabe
+    - [LATE] - Aufgabe
+    - [RUNNING] - Aufgabe
+    - [BLOCKED] - Aufgabe
+    - [WARNING] - Aufgabe
+    - [DONE] - Aufgabe
+
+- **Testergebnisse**
+    - [TESTOPEN] - Testergebnis
+    - [FAILED] - Testergebnis
+    - [PASSED] - Testergebnis
+
+## Referenzen
+Wer mehr über die Möglichkeiten von Markdown bzw. der Diagramme erfahren möchte, findet auf den folgenden Seiten einen ganzen "Bunch" an Infos...
+
+- **Markdown**
+    - Die Markdown-Syntax orientiert sich an [http://daringfireball.net/projects/markdown/syntax](http://daringfireball.net/projects/markdown/syntax)
+- **Mermaid-Diagramme**
+    - Die Syntax der Mermaid-Prozess-Diagramme folgt [http://knsv.github.io/mermaid/flowchart.html](http://knsv.github.io/mermaid/flowchart.html)
+    - Die Syntax der Mermaid-Gantt-Diagramme folgt [http://knsv.github.io/mermaid/gantt.html](http://knsv.github.io/mermaid/gantt.html)
+    - Und die Syntax der Mermaid-Sequenz-Diagramme folgt [http://knsv.github.io/mermaid/sequenceDiagram.html](http://knsv.github.io/mermaid/sequenceDiagram.html)
+- **PlantUML-Diagramme**
+    - Die Syntax der PlantUML-Diagramme (class, process...) folgt [http://plantuml.com/](http://plantuml.com/)
+    - Und PlantUML-Wireframing folgt [http://plantuml.com/salt.html](http://plantuml.com/salt.html)
+
+                            </textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="ymf-block-page-footer hidden" id="ymf-block-page-footer">
+                        <div class="blockTxtFooter" id="blockTxtFooter">
+                            <div class="txt-lastupdate">2014-2016 by
+                                <a href="mailto:michael.schreiner@your-it-fellow.de" class="a-lastupdate" target="_blank">Micha</a> -&gt;
+                                <a href="http://www.your-all-in-one.de/yaio/static/impressum" class="a-lastupdate" target="_blank">Impressum</a>
+                            </div>
+                            <div class="txt-copyrights">Copyright
+                                <a href="http://www.your-all-in-one.de/yaio/static/impressum" target="_blank">www.your-all-in-one.de</a>
+                            </div>
+                            <div class="txt-copyrights">
+                                Your-Markdown-Fellow funktioniert am Besten mit Mozilla-Firefox bzw. Google Chrome.
+                            </div>
+                            <div class="txt-copyrights">
+                                F&uuml;r bestimmte Funktionen des Frontends wurde auf freie Bibliotheken der Projekte:
+                                <a href="http://jquery.com/" target="_blank">JQuery</a>,
+                                <a href="http://jqueryui.com/" target="_blank">JQuery-UI</a>,
+                                <a href="https://github.com/chjj/marked" target="_blank">Marked</a>,
+                                <a href="https://github.com/ajaxorg/ace-builds" target="_blank">Ace</a>,
+                                <a href="https://highlightjs.org/" target="_blank">highlight.js</a>,
+                                <a href="https://github.com/knsv/mermaid" target="_blank">mermaid</a>,
+                                <a href="https://github.com/CodeSeven/toastr" target="_blank">Toastr</a>
+                                zugegriffen.<br/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- YmfAppBase -->
+<script type="text/javascript">
+    var ymfAppBase = YmfAppBase();
+    window.ymfAppBase = ymfAppBase;
+    ymfAppBase.publishDetectorStyles();
+
+    var ymfMarkdownEditorController = ymfAppBase.YmfMarkdownEditorController;
+    window.ymfMarkdownEditorController = ymfMarkdownEditorController;
+    ymfMarkdownEditorController.printWidget.$box.removeClass('hidden');
+
+    // open Wysiwyg
+    ymfMarkdownEditorController.openWysiwygEditorForElement('ymf-workspace-content');
+
+    // disable OK-Button
+    $('.ui-dialog-buttonset button').first().addClass('hidden');
+
+    // add print
+    $('.ui-dialog-buttonset').append($('<a href="" id="ymf-wysiwyg-printlink"' +
+            ' sdf="ojfvbhwjh" onclick="window.print(); return false;">' +
+            '<span class="ui-button-text">Print</span></a>'));
+    $('#ymf-wysiwyg-printlink').addClass('ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only');
+
+    // add info
+    window.showInfo = function() {
+        ymfAppBase.$('#ymf-block-page-footer').dialog({
+            modal: true,
+            title: 'YMF Credits',
+            width: '600px',
+            buttons: {
+                'Schliessen': function () {
+                    ymfAppBase.$(this).dialog('close');
+                }
+            }
+        });
+    };
+    $('.ui-dialog-buttonset').append($('<a href="" id="ymf-wysiwyg-infolink"' +
+            ' onclick="window.showInfo(); return false;">' +
+            '<span class="ui-button-text">Credits</span></a>'));
+    $('#ymf-wysiwyg-infolink').addClass('ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only');
+
+    // overload tooltip from title as seen on http://stackoverflow.com/questions/15734105/jquery-ui-tooltip-does-not-support-html-content
+    $('[data-tooltip]').each(function (i, e) {
+        var tag = $(e);
+        if (tag.is('[title]') === false) {
+            tag.attr('title', '');
+        }
+    });
+
+    $(document).tooltip({
+        items: '[data-tooltip]',
+        content: function () {
+            return $(this).attr('data-tooltip');
+        }
+    });
+
+</script>
+</body>
+</html>

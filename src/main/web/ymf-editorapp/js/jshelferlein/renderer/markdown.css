@@ -1,0 +1,287 @@
+/** 
+ * software for projectmanagement and documentation
+ * 
+ * @FeatureDomain                Collaboration 
+ * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
+ * @category                     collaboration
+ * @copyright                    Copyright (c) 2014, Michael Schreiner
+ * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+/*****************************************
+ *****************************************
+ * markdown-styles
+ *****************************************
+ *****************************************/
+
+/*****************************************
+ * boxes
+ *****************************************/
+.jsh-md-container {
+    clear: both;
+}
+
+.jsh-md-box, .jsh-md-infobox, .jsh-md-warnbox, .jsh-md-alertbox {
+    background-color: white;
+    border: 2px solid #8cacd3;
+    border-radius: 10px;
+    clear: both;
+    float: left;
+    margin-top: 3px;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.jsh-md-infobox-ue, .jsh-md-warnbox-ue, .jsh-md-alertbox-ue {
+    border: 2px solid transparent;
+    margin-top: -5px;
+    float: left;
+}
+
+.jsh-md-infobox-container, .jsh-md-warnbox-container, .jsh-md-alertbox-container {
+    width: 100%;
+    float: left;
+}
+
+.jsh-md-box {
+    background-color: white;
+    border-color: #8cacd3;
+}
+
+.jsh-md-alertbox {
+    border-color: #ff6347;
+}
+
+.jsh-md-warnbox {
+    border-color: #ffd700;
+}
+
+.jsh-md-infobox {
+    border-color: #428bca;
+}
+
+.jsh-md-alertbox-ue {
+    background-color: Salmon;
+}
+
+.jsh-md-warnbox-ue {
+    background-color: #FCEBBF;
+}
+
+.jsh-md-infobox-ue {
+    background-color: #cbe8f6;
+}
+
+/*****************************************
+ * colors
+ *****************************************/
+.jsh-md-background-info {
+    background-color: #dee9ef;
+}
+
+.jsh-md-background-news {
+    background-color: #D2FFA5;
+}
+
+.jsh-md-background-header {
+    background-color: #8cacd3;
+}
+
+.jsh-md-bordercolor-header {
+    border-color: #8cacd3;
+}
+
+.jsh-md-color-yellow {
+    color: #fcf1b5;
+}
+
+.jsh-md-color-white {
+    color: white;
+}
+
+.jsh-md-color-black {
+    color: black;
+}
+
+/*****************************************
+ * text
+ *****************************************/
+.jsh-md-text-left {
+    text-align: left;
+}
+.jsh-md-text-center {
+    text-align: center;
+}
+
+.jsh-md-text-right {
+    text-align: right;
+}
+
+.jsh-md-text-verybig {
+    font-size: 20px;
+}
+
+.jsh-md-text-big {
+    font-size: 16px;
+}
+
+.jsh-md-text-norm {
+    font-size: 11px;
+}
+
+.jsh-md-text-small {
+    font-size: 9px;
+}
+
+/*****************************************
+ * lists
+ *****************************************/
+ul.jsh-md-ul, ol.jsh-md-ol {
+    white-space: normal;
+    word-wrap: normal;
+}
+li.jsh-md-no-list-bullet {
+    list-style: outside none none;
+    margin-left: 10px;
+}
+
+li.jsh-md-list-vertical {
+    border-bottom: 0 none;
+    border-right: 1px dotted #008000;
+    border-top: 0 none;
+    height: auto;
+    list-style: outside none none;
+    margin: 0;
+    width: 100%;
+}
+li.jsh-md-list-horiz {
+    border-bottom: 0 none;
+    border-right: 1px dotted #008000;
+    border-top: 0 none;
+    float: left;
+    height: 120px;
+    list-style: outside none none;
+    margin: 0;
+    width: 30%;
+}
+
+/*****************************************
+ * toggler
+ *****************************************/
+div.jsh-md-togglerparent {
+    display: inline-block;
+    float: right;
+}
+
+/*****************************************
+ * splitter
+ *****************************************/
+li label.jsh-md-splitter1, p label.jsh-md-splitter1 {
+    display: inline-block;
+    font-weight: bold;
+    width: 29%;
+    vertical-align: top;
+}
+
+li span.jsh-md-splitter2, p span.jsh-md-splitter2 {
+    display: inline-block;
+    width: 69%;
+    vertical-align: top;
+}
+
+li label.jsh-md-hide-label, p label.jsh-md-hide-label, p.jsh-md-p-hide-label label.jsh-md-splitter1 {
+    display: none;
+}
+
+li span.jsh-md-hide-label, p span.jsh-md-hide-label, p.jsh-md-p-hide-label span.jsh-md-splitter2 {
+    display: inline-block;
+    width: 99%;
+    vertical-align: top;
+}
+
+li label.jsh-md-list-horiz {
+    text-align: center;
+    display: inline-block;
+    width: 99%;
+    vertical-align: top;
+}
+
+li span.jsh-md-list-horiz {
+    text-align: center;
+    display: inline-block;
+    width: 99%;
+    vertical-align: top;
+}
+
+/*****************************************
+ * table
+ *****************************************/
+table.jsh-md-table, div.jsh-md-box table {
+    border: 1px solid #8CACD3;
+    margin-left: 30px;
+}
+
+td.jsh-md-table, div.jsh-md-box td {
+    border: 1px solid #8CACD3;
+}
+
+th.jsh-md-table, div.jsh-md-box th {
+    font-weight: bold;
+    background: #8CACD3;
+}
+
+tr.jsh-md-table, div.jsh-md-box tr {
+    font-weight: bold;
+    background: #DEE9EF;
+}
+
+/*****************************************
+ * images
+ *****************************************/
+div.jsh-md-box img:not([class]) {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.jsh-md-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*****************************************
+ * pagebreak and footer
+ *****************************************/
+div.jsh-md-pagebreak-before, div.md-container-jsh-md-pagebreak-before {
+}
+
+div.jsh-md-pagebreak-after, div.md-container-jsh-md-pagebreak-after {
+}
+
+div.jsh-md-container-footer {
+    display: block;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+div.jsh-md-container-footer p.jsh-md-p {
+    text-align: center;
+    margin: 2px;
+}
+
+div.jsh-md-container-footer img.jsh-md-img {
+    width: 100%;
+}

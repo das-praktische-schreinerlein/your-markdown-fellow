@@ -1,0 +1,249 @@
+/*! ymf-v0.1.0 app-0.1.0 */
+
+@media print {
+    .jsh-text-toggler {
+        display: none !important;
+    }
+
+    .jsh-block-toggler {
+        display: none !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * diagram-elements
+     *****************************************
+     *****************************************/
+    div.mermaid-source {
+        display: none !important;
+    }
+
+    div.jshmindmap {
+        display: none !important;
+    }
+
+    div.jshmindmap-source {
+        display: block !important;
+    }
+
+    div.servicesmermaid, div.servicesjshmindmap, div.servicesjshplantuml {
+        display: none !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * markdown-styles
+     *****************************************
+     *****************************************/
+    /*****************************************
+     * boxes
+     *****************************************/
+    .jsh-md-container {
+        display: block !important;
+    }
+
+    /*****************************************
+     * toggler
+     *****************************************/
+    div.jsh-md-togglerparent {
+        display: none !important;
+    }
+
+    /*****************************************
+     * footer
+     *****************************************/
+    div.jsh-md-container-footer {
+        display: block;
+        float: bottom;
+        position: fixed;
+        left: 0;
+        margin: 0 auto;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    div.jsh-md-pagebreak-before, div.md-container-jsf-md-pagebreak-before {
+        page-break-before: always !important;
+    }
+
+    div.jsh-md-pagebreak-after, div.md-container-jsf-md-pagebreak-after {
+        page-break-after: always !important;
+    }
+}
+@media print {
+    /*****************************************
+     *****************************************
+     * formatter-elements
+     *****************************************
+     *****************************************/
+    pre {
+        max-height: none;
+        /* show all whitespaces */
+        white-space: pre-wrap;
+        overflow: visible;
+    }
+}
+/*****************************************
+ *****************************************
+ * base
+ *****************************************
+ *****************************************/
+@media print {
+    body {
+        background: none;
+    }
+
+    .page-div-center {
+        width: 100%;
+    }
+
+    .pageContent {
+        width: 100%;
+    }
+
+    .ymf-block-page-footer {
+        display: none !important;
+    }
+
+    div [class*="ui-dialog"], .ui-widget-overlay, div.ui-resizable-handle, div.ui-dialog {
+        display: none !important;
+    }
+
+    .button {
+        display: none !important;
+    }
+}
+
+
+@media print and (orientation: landscape) {
+    body {
+        width: 1200px;
+    }
+
+    #div_full {
+        width: 1150px !important;
+    }
+
+    @page {
+        size: landscape;
+    }
+
+    .box {
+        width: 1160px;
+    }
+
+    .globtoc {
+        width: 1160px;
+    }
+}
+
+@media print and (orientation: portrait) {
+    body {
+        width: 700px;
+    }
+
+    #div_full {
+        width: 650px !important;
+    }
+
+    @page {
+        size: portrait;
+    }
+
+    .box {
+        width: 660px;
+    }
+
+    .globtoc {
+        width: 660px;
+    }
+}
+
+
+/*****************************************
+ *****************************************
+ * toc
+ *****************************************
+ *****************************************/
+@media print {
+    .sidebartoc {
+        display: none !important;
+    }
+
+    #sidebartoc {
+        display: none !important;
+    }
+}
+/*****************************************
+ *****************************************
+ * page-elements
+ *****************************************
+ *****************************************/
+@media print {
+    #ymf-wysiwyg-box, #ymf-preview-box {
+        display: none !important;
+    }
+
+    #ymf-wysiwyg-print {
+        text-align: left;
+        display: block;
+        float: left;
+        width: 100%;
+        height: auto;
+        position: inherit;
+        left: auto;
+        margin-left: 0;
+        padding: 10px;
+        background-color: white;
+        border: 2px solid #cbe8f6;
+        border-radius: 10px;
+    }
+
+    #ymf-wysiwyg-print img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #ymf-wysiwyg-print svg:not([class]) {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #ymf-wysiwyg-print div.mermaid {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.jsh-md-container-footer {
+        left: 20px;
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media print and (orientation: landscape) {
+    #ymf-wysiwyg-print {
+        width: 1150px;
+    }
+
+    div.jsh-md-container-footer {
+        width: 1128px;
+    }
+}
+
+@media print and (orientation: portrait) {
+    #ymf-wysiwyg-print {
+        width: 640px;
+    }
+
+    div.jsh-md-container-footer {
+        width: 618px;
+    }
+}
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>YMF - Your-Markdown-Fellow - Markdown-Hilfe</title>
+
+    <!-- styles: reset -->
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-reset.css"/>
+
+    <!-- styles: vendors -->
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-app-vendors.css"/>
+
+    <!-- styles: ymf-explorer -->
+    <link rel="stylesheet" type="text/css" media="all,print" href="../dist/ymf-app-dist.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="../dist/ymf-app-print.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/jsh-icons-sprite.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../dist/ymf-icons-sprite.css"/>
+
+    <!-- scripts: vendors -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-vendors.js"></script>
+    <!-- scripts: mermaid needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8"
+            src="../dist/ymf-app-vendors/mermaid/mermaid.full.js"></script>
+    <!-- scripts: Markdown-Editor+Formatter needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-vendors/ace/ace.js"></script>
+    <!-- scripts: freemind needs own script for loading plugins -->
+    <script type="text/javascript" charset="UTF-8"
+            src="../dist/ymf-app-vendors/freemind-flash/flashobject.js"></script>
+
+    <!-- scripts: ymf-editorapp -->
+    <script type="text/javascript" charset="UTF-8" src="../dist/ymf-app-dist.js"></script>
+
+    <style>
+        .ui-dialog-buttonset {
+            display: none;
+        }
+        @media screen {
+            body {
+                overflow: hidden;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="div_full" style="width: 100%">
+
+<textarea id="markdownExample" class="hidden">
+
+<!---TOC --->
+
+# Überschrift Ebene 1
+Das hier ist ganz normaler Fließtext.
+- Aufzählung Ebene 1
+  - Aufzählung Unterpunkt Ebene2 mit [Link + Label](http://daringfireball.net/projects/markdown/syntax) oder auch ein interner Link zur [ymf-Spielwiese](ymf:SysPlay1).
+
+## Überschrift Ebene 2
+Ein schönes Feature ist der integrierte Diagramm-Editor.
+- Mermaid-Sequenz-Diagramme
+```mermaid
+sequenceDiagram
+    participant Du
+    participant D'Artagnan
+    Du->>D'Artagnan: Ich habe ein Problem
+    D'Artagnan->>D'Artagnan: denkt nach
+    D'Artagnan->>Du: Ich kann Dir helfen
+```
+- Mermaid-Prozess-Diagramme
+```mermaid
+graph LR
+    A[Du] -->|fragst| B(D'Artagnan)
+    B --> C{D'Artagnan überlegt<br>Kann ich helfen?}
+    C -->|na klar| D[Du bist glücklich]
+    C -->|ich versuchs| D
+```
+- Mermaid-Gantt-Diagramme
+```mermaid
+gantt
+    title Urlaubsplanung Sommer 2015
+    dateFormat  DD.MM.YYYY
+
+    section Urlaub1
+    Alpen1               :alpen1     , 01.07.2015     , 7d
+    Alpen2               :alpen2     , after alpen1   , 7d
+
+    section Urlaub/Ferien
+    Alpen Hüttentour     :alpen3     , after alpen2     , 6d
+    Sachsen              :sachsen    , after alpen3 , 3d
+    Ferienende Schule    :holend     , 27.08.2015     , 1d
+    Ötztal               :alpen4     , after sachsen    , 5d
+```
+- PlantUML-Wireframing
+```ymfplantuml
+@startuml
+salt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  "Enter text here   "
+  ^This is a droplist^
+}
+@enduml
+```
+- PlantUML-Class-Diagramm
+```ymfplantuml
+@startuml 
+' Split into 4 pages
+' page 2x2
+' scale 600 width
+
+'default
+top to bottom direction
+
+skinparam handwritten true
+skinparam class {
+  BackgroundColor PaleGreen
+  ArrowColor SeaGreen
+  BorderColor SpringGreen
+  BackgroundColor<<Foo>> Wheat
+  BorderColor<<Foo>> Tomato
+}
+skinparam stereotypeCBackgroundColor YellowGreen
+skinparam stereotypeCBackgroundColor<< Foo >> DimGray
+
+title <b>Node-Services</b>
+
+abstract class de.ymf.core.nodeservice.NodeServiceImpl
+class de.ymf.core.nodeservice.EventNodeService
+class de.ymf.core.nodeservice.InfoNodeService
+class de.ymf.core.nodeservice.SymLinkNodeService
+class de.ymf.core.nodeservice.TaskNodeService
+class de.ymf.core.nodeservice.UrlResNodeService
+interface de.ymf.core.nodeservice.NodeService
+de.ymf.core.nodeservice.NodeServiceImpl --|> de.ymf.core.nodeservice.NodeService
+de.ymf.core.nodeservice.BaseNodeService --|> de.ymf.core.nodeservice.NodeServiceImpl
+de.ymf.core.nodeservice.EventNodeService --|> de.ymf.core.nodeservice.TaskNodeService
+de.ymf.core.nodeservice.InfoNodeService --|> de.ymf.core.nodeservice.BaseNodeService
+de.ymf.core.nodeservice.SymLinkNodeService --|> de.ymf.core.nodeservice.BaseNodeService
+de.ymf.core.nodeservice.TaskNodeService --|> de.ymf.core.nodeservice.BaseNodeService
+de.ymf.core.nodeservice.UrlResNodeService --|> de.ymf.core.nodeservice.InfoNodeService
+@enduml
+```
+
+### Überschrift Ebene 3
+So kann man Code-Blöcke oder ähnliches einbinden.
+```
+Masterplan
+  System
+     Default
+```
+Das schöne ist, dass ein automatisches Syntaxhighlighting erfolgt, wenn er die Sprache erkennt.
+```
+#!/bin/bash
+// activate elements after 1 second
+setTimeout(function() {
+    // activate speech recognition and others
+    initLanguageSupport();
+    a = a + 1;
+```
+
+#### Überschrift Ebene 4
+
+Und auch die Einbindung von Bildern ist ganz einfach möglich :-)
+
+![Projektexplorer](/examples/help/hilfe-screen-projektexplorer-uebersicht.png "Übersicht Projektexplorer")
+
+Und immer wieder gerne gesehen: *Tabellen*
+
+Head1 | Head2 | Head3
+----|----|----
+Column1 | Column2 | Column3
+
+Und für ganz strukturierte Leute Checklisten:
+- **Aufgabenliste**
+    - [OFFEN] - Aufgabe
+    - [LATE] - Aufgabe
+    - [RUNNING] - Aufgabe
+    - [BLOCKED] - Aufgabe
+    - [WARNING] - Aufgabe
+    - [DONE] - Aufgabe
+
+- **Testergebnisse**
+    - [TESTOPEN] - Testergebnis
+    - [FAILED] - Testergebnis
+    - [PASSED] - Testergebnis
+
+## Referenzen
+- **Markdown**
+    - Die Markdown-Syntax orientiert sich an [http://daringfireball.net/projects/markdown/syntax](http://daringfireball.net/projects/markdown/syntax)
+- **Mermaid-Diagramme**
+    - Die Syntax der Mermaid-Prozess-Diagramme folgt [http://knsv.github.io/mermaid/flowchart.html](http://knsv.github.io/mermaid/flowchart.html)
+    - Die Syntax der Mermaid-Gantt-Diagramme folgt [http://knsv.github.io/mermaid/gantt.html](http://knsv.github.io/mermaid/gantt.html)
+    - Und die Syntax der Mermaid-Sequenz-Diagramme folgt [http://knsv.github.io/mermaid/sequenceDiagram.html](http://knsv.github.io/mermaid/sequenceDiagram.html)
+- **PlantUML-Diagramme**
+    - Die Syntax der PlantUML-Diagramme (class, process...) folgt [http://plantuml.com/](http://plantuml.com/)
+    - Und PlantUML-Wireframing folgt [http://plantuml.com/salt.html](http://plantuml.com/salt.html)
+
+<!---STYLE li:jsh-md-no-list-bullet--->
+
+<!---BOX--->
+# Syntax-Erweiterungen <!---TOGGLER thatsit,text--->
+<!---CONTAINER thatsit--->
+<!---STYLE p:jsh-md-text-center--->
+Text center
+
+<!---/STYLE p:jsh-md-text-center--->
+
+- Spalte1 Ue:|:text
+- Spalte2 Ue:|:text
+- Spalte3 Ue:|:text
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX ymf-md-background-info--->
+### Box mit Hintergrundfarbe info <!---TOGGLER management,icon--->
+<!---CONTAINER management--->
+<!---STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+- Spalte1 Ue:|:text
+- Spalte2 Ue:|:text
+- Spalte3 Ue:|:text
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+<!---/STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX ymf-md-background-info--->
+### Box mit Hintergrundfarbe info und anderem Icon <!---TOGGLER management2,icon2--->
+<!---CONTAINER management2--->
+<!---STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+- Spalte4 Ue:|:text
+- Spalte5 Ue:|:text
+<!---/STYLE li ul splitter1 splitter2:jsh-md-list-horiz--->
+<!---/CONTAINER--->
+<!---/BOX--->
+
+<!---BOX.INFO Der Infoname--->
+Bla Blub
+
+<!---/BOX.INFO--->
+
+<!---BOX.ALERT Der Alertname--->
+Bla Blub
+
+<!---/BOX.ALERT--->
+
+<!---BOX.WARN Der Warnname--->
+Bla Blub
+
+<!---/BOX.WARN--->
+
+Und an alle Listen des Styles "ymf-md-list-horiz" einen Texttoggler anhaengen :-)
+<!---TOGGLER.AFTER ul:jsh-md-list-horiz,text--->
+
+</textarea>
+
+</div>
+
+<!-- ymfAppBase -->
+<script type="text/javascript">
+    var ymfAppBase = YmfAppBase();
+    window.ymfAppBase = ymfAppBase;
+    ymfAppBase.publishDetectorStyles();
+
+    var ymfMarkdownEditorController = ymfAppBase.YmfMarkdownEditorController;
+    window.ymfMarkdownEditorController = ymfMarkdownEditorController;
+    ymfMarkdownEditorController.wysiwygWidget.$box.removeClass('hidden');
+    ymfMarkdownEditorController.printWidget.$box.removeClass('hidden');
+
+    var myParentId = 'ymf-wysiwyg-editor';
+    ymfMarkdownEditorController.wysiwygWidget.config.textAreaId = 'markdownExample';
+    ymfMarkdownEditorController.wysiwygWidget.config.myParentId = myParentId;
+
+    // create  Editor
+    ymfMarkdownEditorController.createMarkdownEditorForTextarea(myParentId, ymfMarkdownEditorController.wysiwygWidget.config.textAreaId);
+
+    // set preview-content
+    ymfMarkdownEditorController.wysiwygWidget._renderContent();
+
+    var resizeEditorBox = function() {
+        var width = window.innerWidth -30;
+        var height = window.innerHeight;
+        ymfMarkdownEditorController.wysiwygWidget.$box.css('width', (width).toString() + 'px');
+        ymfMarkdownEditorController.wysiwygWidget.$box.css('height', (height).toString() + 'px');
+        ymfMarkdownEditorController._resizeWysiwygEditor();
+    };
+    ymfAppBase.$(window).on('resize', function () {
+        resizeEditorBox();
+    });
+    resizeEditorBox();
+
+    // set print content
+    var markdown = $('#markdownExample').val();
+    ymfMarkdownEditorController.printWidget.setContent(markdown);
+</script>
+
+</body>
+</html>
