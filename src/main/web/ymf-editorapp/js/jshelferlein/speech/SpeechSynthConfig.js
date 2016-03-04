@@ -14,7 +14,9 @@
 
 /**
  * default configuration of the JsHelferlein.SpeechSynthController
- * 
+ *
+ * @return {JsHelferlein.SpeechSynthConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.SpeechSynthConfig = function () {

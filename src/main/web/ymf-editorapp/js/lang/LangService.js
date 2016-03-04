@@ -14,10 +14,12 @@
 
 /**
  * servicefunctions for language
- *
+ * @param {JsHelferlein.AppBase} appBase  appBase of the application
+ * @return {Ymf.Lang}                     an instance of the service
+ * @augments JsHelferlein.ServiceBase
+ * @constructor
  */
-
-Yaio.Lang = function (appBase) {
+Ymf.Lang = function (appBase) {
     'use strict';
 
     // my own instance
@@ -31,10 +33,7 @@ Yaio.Lang = function (appBase) {
 
     /**
      * init the multilanguage support for all tags with attribute <XX lang='de'>
-     * @FeatureDomain                GUI
-     * @FeatureResult                GUI-result: init multilanguage-support
-     * @FeatureKeywords              GUI Editor Multilanguagesupport
-     * @param langKey                key of the preferred-language
+     * @param {String} langKey              key of the preferred-language
      */
     me.initLanguageSupport = function (langKey) {
         // Create language switcher instance and set default language to tech

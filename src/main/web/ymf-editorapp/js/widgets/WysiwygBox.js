@@ -14,12 +14,14 @@
 
 /**
  * Widget of the WysiwygEditor-Box
- * @param appBase
- * @param config
- *      {string} textAreaId     id of the connected textarea with the source to display
- *      {string} myParentId     parentId
- *      {object} editor         instance of the ace-editor
- *      {handler} updateIntervalHandler  intrvallHandler which updates the preview
+ * @param {JsHelferlein.AppBase} appBase            appBase of the application
+ * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ *      {string} textAreaId                         id of the connected textarea with the source to display
+ *      {string} myParentId                         parentId
+ *      {object} editor                             instance of the ace-editor
+ *      {handler} updateIntervalHandler             intervallHandler which updates the preview
+ * @return {Ymf.WysiwygBox}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.WysiwygBox = function (appBase, config) {

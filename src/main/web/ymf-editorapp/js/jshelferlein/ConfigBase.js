@@ -14,7 +14,8 @@
 
 /**
  * base configuration for all JsHelferlein
- * 
+ *
+ * @return {JsHelferlein.ConfigBase}                an instance of the config
  * @constructor
  */
 JsHelferlein.ConfigBase = function () {

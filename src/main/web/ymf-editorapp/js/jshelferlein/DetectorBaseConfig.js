@@ -14,7 +14,9 @@
 
 /**
  * base configuration for all JsHelferlein.DetectorConfig
- * 
+ *
+ * @return {JsHelferlein.DetectorBaseConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.DetectorBaseConfig = function () {

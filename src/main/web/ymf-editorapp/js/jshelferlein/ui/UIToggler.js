@@ -16,6 +16,8 @@
  * services for adding toggler-support to your app
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.UIToggler}                      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.UIToggler = function (appBase) {

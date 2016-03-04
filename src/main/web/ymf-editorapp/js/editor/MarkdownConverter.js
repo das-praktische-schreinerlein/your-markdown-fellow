@@ -14,8 +14,10 @@
 
 /**
  * servicefunctions for converting markdown
- * 
+ *
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {Ymf.MarkdownConverter}             an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownConverter = function (appBase) {

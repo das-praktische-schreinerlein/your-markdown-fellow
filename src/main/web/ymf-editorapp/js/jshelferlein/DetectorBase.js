@@ -18,6 +18,7 @@
  * @param {JsHelferlein.AppBase} appBase                  appBase of the application
  * @param {JsHelferlein.DetectorBaseConfig} config        optional configuration
  * @param {JsHelferlein.DetectorBaseConfig} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.DetectorBase}                    an instance of the detector
  * @constructor
  */
 JsHelferlein.DetectorBase = function (appBase, config, defaultConfig) {

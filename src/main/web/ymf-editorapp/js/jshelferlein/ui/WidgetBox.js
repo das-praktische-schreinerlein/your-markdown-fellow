@@ -18,6 +18,8 @@
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.WidgetBox}               an instance of the widget
+ * @augments JsHelferlein.WidgetBase
  * @constructor
  */
 JsHelferlein.WidgetBox = function (appBase, config, defaultConfig) {

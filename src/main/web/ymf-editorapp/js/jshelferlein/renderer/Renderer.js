@@ -16,6 +16,8 @@
  * servicefunctions for formatting (markdown, diagrams, mindmaps..)
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.Renderer}                an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.Renderer = function (appBase) {

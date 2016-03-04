@@ -18,8 +18,9 @@
 window.Ymf = {};
 
 /**
- * base module of the Ymf app
- * 
+ * the appBase for the YmfApp
+ * @returns {YmfAppBase}       an appBase-instance
+ * @augments JsHelferlein.AppBase
  * @constructor
  */
 window.YmfAppBase = function () {

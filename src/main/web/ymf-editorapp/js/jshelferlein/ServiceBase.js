@@ -18,6 +18,7 @@
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig   optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.ServiceBase}               an instance of the service
  * @constructor
  */
 JsHelferlein.ServiceBase = function (appBase, config, defaultConfig) {

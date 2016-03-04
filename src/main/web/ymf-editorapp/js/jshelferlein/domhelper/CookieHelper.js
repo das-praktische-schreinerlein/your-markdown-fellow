@@ -17,6 +17,8 @@
  * servicefunctions for cookie-handling
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {JsHelferlein.CookieHelper}         an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.CookieHelper = function (appBase) {

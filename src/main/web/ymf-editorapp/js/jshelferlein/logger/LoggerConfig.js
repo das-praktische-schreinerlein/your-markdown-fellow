@@ -14,7 +14,9 @@
 
 /**
  * default configuration for JsHelferlein.Logger
- * 
+ *
+ * @return {JsHelferlein.LoggerConfig}       an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.LoggerConfig = function () {

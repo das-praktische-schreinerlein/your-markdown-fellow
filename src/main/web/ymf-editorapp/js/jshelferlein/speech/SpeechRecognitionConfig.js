@@ -14,7 +14,9 @@
 
 /**
  * default configuration of the JsHelferlein.SpeechRecognitionController
- * 
+ *
+ * @return {JsHelferlein.SpeechRecognitionConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.SpeechRecognitionConfig = function () {

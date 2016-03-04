@@ -16,6 +16,8 @@
  * util functions for file-manipulation (download, load...)
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.FileUtils}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.FileUtils = function (appBase) {

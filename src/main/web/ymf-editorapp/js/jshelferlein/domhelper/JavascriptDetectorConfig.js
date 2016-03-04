@@ -14,7 +14,9 @@
 
 /**
  * default configuration for JsHelferlein.JavascriptDetector
- * 
+ *
+ * @return {JsHelferlein.JavascriptDetectorConfig}   an instance of the config
+ * @augments JsHelferlein.DetectorBaseConfig
  * @constructor
  */
 JsHelferlein.JavascriptDetectorConfig = function () {

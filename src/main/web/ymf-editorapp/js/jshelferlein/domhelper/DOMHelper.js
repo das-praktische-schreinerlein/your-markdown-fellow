@@ -16,6 +16,8 @@
  * servicefunctions for dom-handling
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {JsHelferlein.DOMHelper}            an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DOMHelper = function (appBase) {

@@ -16,6 +16,8 @@
  * servicefunctions for parsing checklists
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.ChecklistParser}         an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.ChecklistParser = function (appBase) {

@@ -16,6 +16,8 @@
  * servicefunctions for parsing mindmap-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.MindmapParser}           an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.MindmapParser = function (appBase) {

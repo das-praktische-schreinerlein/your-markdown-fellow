@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration (default is set in module)
+ * @return {JsHelferlein.SpeechRecognitionBox}    an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 JsHelferlein.SpeechRecognitionBox = function (appBase, config) {

@@ -14,7 +14,9 @@
 
 /**
  * base configuration of an JsHelferlein.AppBase
- * 
+ *
+ * @return {JsHelferlein.AppBaseConfig}         an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.AppBaseConfig = function () {

@@ -16,6 +16,8 @@
  * services for adding dialog-support to your app
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.UIDialogs}                      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.UIDialogs = function (appBase) {

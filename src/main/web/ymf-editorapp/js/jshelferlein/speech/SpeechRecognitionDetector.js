@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase                               appBase of the application
  * @param {JsHelferlein.SpeechRecognitionDetectorConfig} config        optional configuration (default JsHelferlein.SpeechRecognitionDetectorConfig)
+ * @return {JsHelferlein.SpeechRecognitionDetector}                    an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.SpeechRecognitionDetector = function (appBase, config) {

@@ -18,6 +18,8 @@
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} url          url to the markdown-helpfile to open in separate window
+ * @return {Ymf.HelpBox}                            an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.HelpBox = function (appBase, config) {

@@ -16,6 +16,8 @@
  * servicefunctions for parsing images as slimbox
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.ImageSlimboxParser}      an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.ImageSlimboxParser = function (appBase) {

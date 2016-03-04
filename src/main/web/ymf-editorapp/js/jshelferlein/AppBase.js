@@ -16,6 +16,7 @@
  * base module of an app (with service-configuration...)
  * 
  * @param {JsHelferlein.AppBaseConfig} config          optional configuration (default JsHelferlein.AppBaseConfig)
+ * @return {JsHelferlein.AppBase}                      an instance of the service
  * @constructor
  */
 JsHelferlein.AppBase = function (config) {

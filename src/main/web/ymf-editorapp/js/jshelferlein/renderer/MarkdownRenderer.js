@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase                appBase of the application
  * @param {JsHelferlein.MarkdownRendererConfig} config  optional configuration  (default JsHelferlein.MarkdownRendererConfig)
+ * @return {JsHelferlein.MarkdownRenderer}              an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.MarkdownRenderer = function (appBase, config) {

@@ -16,6 +16,8 @@
  * servicefunctions for parsing plantuml-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.PlantumlParser}          an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.PlantumlParser = function (appBase) {

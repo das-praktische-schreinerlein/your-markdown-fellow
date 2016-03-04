@@ -14,7 +14,9 @@
 
 /**
  * default configuration for JsHelferlein.MarkdownRenderer
- * 
+ *
+ * @return {JsHelferlein.MarkdownRendererConfig}       an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.MarkdownRendererConfig = function () {

@@ -13,8 +13,9 @@
  */
 
 /**
- * base configuration of the YmfAppBase
- * 
+ * the Config for the YmfAppBase
+ * @returns {YmfAppBaseConfig}         an config-instance
+ * @augments JsHelferlein.AppBaseConfig
  * @constructor
  */
 window.YmfAppBaseConfig = function () {

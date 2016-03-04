@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase                         appBase of the application
  * @param {JsHelferlein.SpeechSynthDetectorConfig} config        optional configuration (default JsHelferlein.SpeechSynthDetectorConfig)
+ * @return {JsHelferlein.SpeechSynthDetector}                    an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.SpeechSynthDetector = function (appBase, config) {

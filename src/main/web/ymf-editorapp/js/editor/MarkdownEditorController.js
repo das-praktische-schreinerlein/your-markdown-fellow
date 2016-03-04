@@ -18,6 +18,8 @@
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.ConfigBase} config     optional configuration (default set in module)
  *      {boolean} usePrintWidget               create and sync PrintWidget
+ * @return {Ymf.MarkdownEditorController}      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownEditorController = function (appBase, config) {

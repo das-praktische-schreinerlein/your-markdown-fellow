@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.LoggerConfig} config   optional configuration
+ * @return {JsHelferlein.Logger}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.Logger = function (appBase, config) {

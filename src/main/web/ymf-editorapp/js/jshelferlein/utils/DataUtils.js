@@ -16,6 +16,8 @@
  * util-functions for formatting data
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.DataUtils}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DataUtils = function (appBase) {

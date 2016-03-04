@@ -16,6 +16,8 @@
  * service for adding Speech-links to your app-elements
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.SpeechServiceHelper}            an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.SpeechServiceHelper = function (appBase) {

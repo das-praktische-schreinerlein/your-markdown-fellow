@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
  * @param {JsHelferlein.SpeechSynthConfig} config        optional configuration (default JsHelferlein.SpeechSynthConfig)
+ * @return {JsHelferlein.SpeechSynthController}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.SpeechSynthController = function (appBase, config) {

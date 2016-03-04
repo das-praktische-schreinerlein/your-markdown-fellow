@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.ConfigBase} config     optional configuration (default JsHelferlein.JavascriptDetectorConfig)
+ * @return {JsHelferlein.JavascriptDetector}   an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.JavascriptDetector = function (appBase, config) {

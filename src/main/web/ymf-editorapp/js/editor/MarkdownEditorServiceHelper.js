@@ -16,6 +16,8 @@
  * service for adding editor/preview-links to your app-elements
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
+ * @return {Ymf.MarkdownEditorServiceHelper}        an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownEditorServiceHelper = function (appBase) {

@@ -16,6 +16,8 @@
  * servicefunctions to decorate diagrams
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.DiagramWidgets}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DiagramWidgets = function (appBase) {

@@ -16,6 +16,8 @@
  * servicefunctions for parsing sourcecode-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.SyntaxHighlighterParser} an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.SyntaxHighlighterParser = function (appBase) {

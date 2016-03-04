@@ -14,7 +14,9 @@
 
 /**
  * default configuration of the JsHelferlein.SpeechSynthDetector
- * 
+ *
+ * @return {JsHelferlein.SpeechSynthDetectorConfig}      an instance of the config
+ * @augments JsHelferlein.DetectorBaseConfig
  * @constructor
  */
 JsHelferlein.SpeechSynthDetectorConfig = function () {

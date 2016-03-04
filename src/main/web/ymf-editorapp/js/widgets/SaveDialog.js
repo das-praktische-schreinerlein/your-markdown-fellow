@@ -18,6 +18,8 @@
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} textAreaId     id of the connected textarea with the source to display
+ * @return {Ymf.SaveDialog}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.SaveDialog = function (appBase, config) {

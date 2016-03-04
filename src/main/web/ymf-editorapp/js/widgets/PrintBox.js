@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ * @return {Ymf.PrintBox}                           an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.PrintBox = function (appBase, config) {

@@ -18,6 +18,8 @@
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.AbstractParser}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.AbstractParser = function (appBase, config, defaultConfig) {

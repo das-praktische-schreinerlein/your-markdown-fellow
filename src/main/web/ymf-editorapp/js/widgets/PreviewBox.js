@@ -17,6 +17,8 @@
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ * @return {Ymf.PreviewBox}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.PreviewBox = function (appBase, config) {

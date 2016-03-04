@@ -16,6 +16,8 @@
  * servicefunctions for parsing mermaid-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.MermaidParser}           an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.MermaidParser = function (appBase) {
