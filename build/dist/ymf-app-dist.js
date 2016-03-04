@@ -9,6 +9,7 @@ window.JsHelferlein = {};
  * base module of an app (with service-configuration...)
  * 
  * @param {JsHelferlein.AppBaseConfig} config          optional configuration (default JsHelferlein.AppBaseConfig)
+ * @return {JsHelferlein.AppBase}                      an instance of the service
  * @constructor
  */
 JsHelferlein.AppBase = function (config) {
@@ -351,7 +352,9 @@ JsHelferlein.AppBase = function (config) {
 
 /**
  * base configuration of an JsHelferlein.AppBase
- * 
+ *
+ * @return {JsHelferlein.AppBaseConfig}         an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.AppBaseConfig = function () {
@@ -368,7 +371,8 @@ JsHelferlein.AppBaseConfig = function () {
 };
 /**
  * base configuration for all JsHelferlein
- * 
+ *
+ * @return {JsHelferlein.ConfigBase}                an instance of the config
  * @constructor
  */
 JsHelferlein.ConfigBase = function () {
@@ -401,6 +405,7 @@ JsHelferlein.ConfigBase = function () {
  * @param {JsHelferlein.AppBase} appBase                  appBase of the application
  * @param {JsHelferlein.DetectorBaseConfig} config        optional configuration
  * @param {JsHelferlein.DetectorBaseConfig} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.DetectorBase}                    an instance of the detector
  * @constructor
  */
 JsHelferlein.DetectorBase = function (appBase, config, defaultConfig) {
@@ -492,7 +497,9 @@ JsHelferlein.DetectorBase = function (appBase, config, defaultConfig) {
 };
 /**
  * base configuration for all JsHelferlein.DetectorConfig
- * 
+ *
+ * @return {JsHelferlein.DetectorBaseConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.DetectorBaseConfig = function () {
@@ -510,6 +517,7 @@ JsHelferlein.DetectorBaseConfig = function () {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig   optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.ServiceBase}               an instance of the service
  * @constructor
  */
 JsHelferlein.ServiceBase = function (appBase, config, defaultConfig) {
@@ -561,6 +569,7 @@ JsHelferlein.ServiceBase = function (appBase, config, defaultConfig) {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig   optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.WidgetBase}                an instance of the widget
  * @constructor
  */
 JsHelferlein.WidgetBase = function (appBase, config, defaultConfig) {
@@ -645,6 +654,8 @@ JsHelferlein.WidgetBase = function (appBase, config, defaultConfig) {
  * servicefunctions for cookie-handling
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {JsHelferlein.CookieHelper}         an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.CookieHelper = function (appBase) {
@@ -708,6 +719,8 @@ JsHelferlein.CookieHelper = function (appBase) {
  * servicefunctions for dom-handling
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {JsHelferlein.DOMHelper}            an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DOMHelper = function (appBase) {
@@ -865,6 +878,8 @@ JsHelferlein.DOMHelper = function (appBase) {
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.ConfigBase} config     optional configuration (default JsHelferlein.JavascriptDetectorConfig)
+ * @return {JsHelferlein.JavascriptDetector}   an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.JavascriptDetector = function (appBase, config) {
@@ -885,7 +900,9 @@ JsHelferlein.JavascriptDetector = function (appBase, config) {
 };
 /**
  * default configuration for JsHelferlein.JavascriptDetector
- * 
+ *
+ * @return {JsHelferlein.JavascriptDetectorConfig}   an instance of the config
+ * @augments JsHelferlein.DetectorBaseConfig
  * @constructor
  */
 JsHelferlein.JavascriptDetectorConfig = function () {
@@ -902,6 +919,8 @@ JsHelferlein.JavascriptDetectorConfig = function () {
  * 
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.LoggerConfig} config   optional configuration
+ * @return {JsHelferlein.Logger}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.Logger = function (appBase, config) {
@@ -1098,7 +1117,9 @@ JsHelferlein.Logger = function (appBase, config) {
 };
 /**
  * default configuration for JsHelferlein.Logger
- * 
+ *
+ * @return {JsHelferlein.LoggerConfig}       an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.LoggerConfig = function () {
@@ -1117,6 +1138,8 @@ JsHelferlein.LoggerConfig = function () {
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.AbstractParser}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.AbstractParser = function (appBase, config, defaultConfig) {
@@ -1147,6 +1170,8 @@ JsHelferlein.AbstractParser = function (appBase, config, defaultConfig) {
  * servicefunctions for parsing checklists
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.ChecklistParser}         an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.ChecklistParser = function (appBase) {
@@ -1281,6 +1306,8 @@ JsHelferlein.ChecklistParser = function (appBase) {
  * servicefunctions to decorate diagrams
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.DiagramWidgets}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DiagramWidgets = function (appBase) {
@@ -1350,6 +1377,8 @@ JsHelferlein.DiagramWidgets = function (appBase) {
  * servicefunctions for parsing images as slimbox
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.ImageSlimboxParser}      an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.ImageSlimboxParser = function (appBase) {
@@ -1414,6 +1443,8 @@ JsHelferlein.ImageSlimboxParser = function (appBase) {
  * servicefunctions for parsing mermaid-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.MermaidParser}           an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.MermaidParser = function (appBase) {
@@ -1500,6 +1531,8 @@ JsHelferlein.MermaidParser = function (appBase) {
  * servicefunctions for parsing mindmap-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.MindmapParser}           an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.MindmapParser = function (appBase) {
@@ -1585,6 +1618,8 @@ JsHelferlein.MindmapParser = function (appBase) {
  * servicefunctions for parsing plantuml-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.PlantumlParser}          an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.PlantumlParser = function (appBase) {
@@ -1706,6 +1741,8 @@ JsHelferlein.PlantumlParser = function (appBase) {
  * servicefunctions for parsing sourcecode-sources
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.SyntaxHighlighterParser} an instance of the service
+ * @augments JsHelferlein.AbstractParser
  * @constructor
  */
 JsHelferlein.SyntaxHighlighterParser = function (appBase) {
@@ -2097,6 +2134,8 @@ JsHelferlein.SyntaxHighlighterParser = function (appBase) {
  * 
  * @param {JsHelferlein.AppBase} appBase                appBase of the application
  * @param {JsHelferlein.MarkdownRendererConfig} config  optional configuration  (default JsHelferlein.MarkdownRendererConfig)
+ * @return {JsHelferlein.MarkdownRenderer}              an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.MarkdownRenderer = function (appBase, config) {
@@ -2347,7 +2386,9 @@ JsHelferlein.MarkdownRenderer = function (appBase, config) {
 
 /**
  * default configuration for JsHelferlein.MarkdownRenderer
- * 
+ *
+ * @return {JsHelferlein.MarkdownRendererConfig}       an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.MarkdownRendererConfig = function () {
@@ -2363,6 +2404,8 @@ JsHelferlein.MarkdownRendererConfig = function () {
  * servicefunctions for formatting (markdown, diagrams, mindmaps..)
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.Renderer}                an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.Renderer = function (appBase) {
@@ -2484,6 +2527,8 @@ JsHelferlein.Renderer = function (appBase) {
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration (default is set in module)
+ * @return {JsHelferlein.SpeechRecognitionBox}    an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 JsHelferlein.SpeechRecognitionBox = function (appBase, config) {
@@ -2574,7 +2619,9 @@ JsHelferlein.SpeechRecognitionBox = function (appBase, config) {
 
 /**
  * default configuration of the JsHelferlein.SpeechRecognitionController
- * 
+ *
+ * @return {JsHelferlein.SpeechRecognitionConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.SpeechRecognitionConfig = function () {
@@ -2603,6 +2650,8 @@ JsHelferlein.SpeechRecognitionConfig = function () {
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
  * @param {JsHelferlein.SpeechRecognitionConfig} config  optional configuration (default JsHelferlein.SpeechRecognitionConfig)
+ * @return {JsHelferlein.SpeechRecognitionController}    an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.SpeechRecognitionController = function (appBase, config) {
@@ -2898,6 +2947,8 @@ JsHelferlein.SpeechRecognitionController = function (appBase, config) {
  * 
  * @param {JsHelferlein.AppBase} appBase                               appBase of the application
  * @param {JsHelferlein.SpeechRecognitionDetectorConfig} config        optional configuration (default JsHelferlein.SpeechRecognitionDetectorConfig)
+ * @return {JsHelferlein.SpeechRecognitionDetector}                    an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.SpeechRecognitionDetector = function (appBase, config) {
@@ -2934,7 +2985,9 @@ JsHelferlein.SpeechRecognitionDetector = function (appBase, config) {
 };
 /**
  * default configuration of the JsHelferlein.SpeechRecognitionDetector
- * 
+ *
+ * @return {JsHelferlein.SpeechRecognitionDetectorConfig}      an instance of the config
+ * @augments JsHelferlein.DetectorBaseConfig
  * @constructor
  */
 JsHelferlein.SpeechRecognitionDetectorConfig = function () {
@@ -2950,6 +3003,8 @@ JsHelferlein.SpeechRecognitionDetectorConfig = function () {
  * service for adding Speech-links to your app-elements
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.SpeechServiceHelper}            an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.SpeechServiceHelper = function (appBase) {
@@ -3058,6 +3113,8 @@ JsHelferlein.SpeechServiceHelper = function (appBase) {
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration (default is set in module)
+ * @return {JsHelferlein.SpeechSynthBox}          an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 JsHelferlein.SpeechSynthBox = function (appBase, config) {
@@ -3137,7 +3194,9 @@ JsHelferlein.SpeechSynthBox = function (appBase, config) {
 
 /**
  * default configuration of the JsHelferlein.SpeechSynthController
- * 
+ *
+ * @return {JsHelferlein.SpeechSynthConfig}      an instance of the config
+ * @augments JsHelferlein.ConfigBase
  * @constructor
  */
 JsHelferlein.SpeechSynthConfig = function () {
@@ -3167,6 +3226,8 @@ JsHelferlein.SpeechSynthConfig = function () {
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
  * @param {JsHelferlein.SpeechSynthConfig} config        optional configuration (default JsHelferlein.SpeechSynthConfig)
+ * @return {JsHelferlein.SpeechSynthController}          an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.SpeechSynthController = function (appBase, config) {
@@ -3464,6 +3525,8 @@ JsHelferlein.SpeechSynthController = function (appBase, config) {
  * 
  * @param {JsHelferlein.AppBase} appBase                         appBase of the application
  * @param {JsHelferlein.SpeechSynthDetectorConfig} config        optional configuration (default JsHelferlein.SpeechSynthDetectorConfig)
+ * @return {JsHelferlein.SpeechSynthDetector}                    an instance of the service
+ * @augments JsHelferlein.DetectorBase
  * @constructor
  */
 JsHelferlein.SpeechSynthDetector = function (appBase, config) {
@@ -3501,7 +3564,9 @@ JsHelferlein.SpeechSynthDetector = function (appBase, config) {
 };
 /**
  * default configuration of the JsHelferlein.SpeechSynthDetector
- * 
+ *
+ * @return {JsHelferlein.SpeechSynthDetectorConfig}      an instance of the config
+ * @augments JsHelferlein.DetectorBaseConfig
  * @constructor
  */
 JsHelferlein.SpeechSynthDetectorConfig = function () {
@@ -3517,6 +3582,8 @@ JsHelferlein.SpeechSynthDetectorConfig = function () {
  * services for adding dialog-support to your app
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.UIDialogs}                      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.UIDialogs = function (appBase) {
@@ -3670,6 +3737,8 @@ JsHelferlein.UIDialogs = function (appBase) {
  * services for adding toggler-support to your app
  * 
  * @param {JsHelferlein.AppBase} appBase                 appBase of the application
+ * @return {JsHelferlein.UIToggler}                      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.UIToggler = function (appBase) {
@@ -3941,6 +4010,8 @@ JsHelferlein.UIToggler = function (appBase) {
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
  * @param {JsHelferlein.ConfigBase} config        optional configuration
  * @param {JsHelferlein.ConfigBase} defaultConfig optional defaultconfig if no configuration is set
+ * @return {JsHelferlein.WidgetBox}               an instance of the widget
+ * @augments JsHelferlein.WidgetBase
  * @constructor
  */
 JsHelferlein.WidgetBox = function (appBase, config, defaultConfig) {
@@ -4104,6 +4175,8 @@ JsHelferlein.WidgetBox = function (appBase, config, defaultConfig) {
  * util-functions for formatting data
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.DataUtils}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.DataUtils = function (appBase) {
@@ -4313,6 +4386,8 @@ JsHelferlein.DataUtils = function (appBase) {
  * util functions for file-manipulation (download, load...)
  * 
  * @param {JsHelferlein.AppBase} appBase          appBase of the application
+ * @return {JsHelferlein.FileUtils}               an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 JsHelferlein.FileUtils = function (appBase) {
@@ -4391,8 +4466,9 @@ JsHelferlein.FileUtils = function (appBase) {
     return me;
 };
 /**
- * base configuration of the YmfAppBase
- * 
+ * the Config for the YmfAppBase
+ * @returns {YmfAppBaseConfig}         an config-instance
+ * @augments JsHelferlein.AppBaseConfig
  * @constructor
  */
 window.YmfAppBaseConfig = function () {
@@ -4420,8 +4496,9 @@ window.YmfAppBaseConfig = function () {
 window.Ymf = {};
 
 /**
- * base module of the Ymf app
- * 
+ * the appBase for the YmfApp
+ * @returns {YmfAppBase}       an appBase-instance
+ * @augments JsHelferlein.AppBase
  * @constructor
  */
 window.YmfAppBase = function () {
@@ -4480,6 +4557,8 @@ window.YmfAppBase = function () {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} url          url to the markdown-helpfile to open in separate window
+ * @return {Ymf.FileLoadDialog}                     an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.FileLoadDialog = function (appBase, config) {
@@ -4560,6 +4639,8 @@ Ymf.FileLoadDialog = function (appBase, config) {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} url          url to the markdown-helpfile to open in separate window
+ * @return {Ymf.HelpBox}                            an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.HelpBox = function (appBase, config) {
@@ -4621,6 +4702,8 @@ Ymf.HelpBox = function (appBase, config) {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} textAreaId     id of the connected textarea with the source to display
+ * @return {Ymf.LayoutOptionsDialog}                an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.LayoutOptionsDialog = function (appBase, config) {
@@ -4720,6 +4803,8 @@ Ymf.LayoutOptionsDialog = function (appBase, config) {
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ * @return {Ymf.PreviewBox}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.PreviewBox = function (appBase, config) {
@@ -4799,6 +4884,8 @@ Ymf.PreviewBox = function (appBase, config) {
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ * @return {Ymf.PrintBox}                           an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.PrintBox = function (appBase, config) {
@@ -4851,6 +4938,8 @@ Ymf.PrintBox = function (appBase, config) {
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
  * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
  *      {string} textAreaId     id of the connected textarea with the source to display
+ * @return {Ymf.SaveDialog}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.SaveDialog = function (appBase, config) {
@@ -4930,12 +5019,14 @@ Ymf.SaveDialog = function (appBase, config) {
 
 /**
  * Widget of the WysiwygEditor-Box
- * @param appBase
- * @param config
- *      {string} textAreaId     id of the connected textarea with the source to display
- *      {string} myParentId     parentId
- *      {object} editor         instance of the ace-editor
- *      {handler} updateIntervalHandler  intrvallHandler which updates the preview
+ * @param {JsHelferlein.AppBase} appBase            appBase of the application
+ * @param {JsHelferlein.ConfigBase} config          optional configuration (default set in module)
+ *      {string} textAreaId                         id of the connected textarea with the source to display
+ *      {string} myParentId                         parentId
+ *      {object} editor                             instance of the ace-editor
+ *      {handler} updateIntervalHandler             intervallHandler which updates the preview
+ * @return {Ymf.WysiwygBox}                         an instance of the widget
+ * @augments JsHelferlein.WidgetBox
  * @constructor
  */
 Ymf.WysiwygBox = function (appBase, config) {
@@ -5069,8 +5160,10 @@ Ymf.WysiwygBox = function (appBase, config) {
 
 /**
  * servicefunctions for converting markdown
- * 
+ *
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
+ * @return {Ymf.MarkdownConverter}             an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownConverter = function (appBase) {
@@ -5129,6 +5222,8 @@ Ymf.MarkdownConverter = function (appBase) {
  * @param {JsHelferlein.AppBase} appBase       appBase of the application
  * @param {JsHelferlein.ConfigBase} config     optional configuration (default set in module)
  *      {boolean} usePrintWidget               create and sync PrintWidget
+ * @return {Ymf.MarkdownEditorController}      an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownEditorController = function (appBase, config) {
@@ -5514,6 +5609,8 @@ Ymf.MarkdownEditorController = function (appBase, config) {
  * service for adding editor/preview-links to your app-elements
  * 
  * @param {JsHelferlein.AppBase} appBase            appBase of the application
+ * @return {Ymf.MarkdownEditorServiceHelper}        an instance of the service
+ * @augments JsHelferlein.ServiceBase
  * @constructor
  */
 Ymf.MarkdownEditorServiceHelper = function (appBase) {
