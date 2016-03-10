@@ -64,7 +64,11 @@ JsHelferlein.ChecklistParser = function (appBase) {
     me.renderBlock = function (selector, force) {
         me.$(selector).each(function (i, block) {
             console.log('ChecklistParser.renderBlock ' + selector);
-            me._highlightCheckList(block, force);
+            try {
+                me._highlightCheckList(block, force);
+            } catch (ex) {
+                console.error('ChecklistParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 

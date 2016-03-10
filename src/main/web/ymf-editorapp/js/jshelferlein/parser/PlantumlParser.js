@@ -41,10 +41,14 @@ JsHelferlein.PlantumlParser = function (appBase) {
 
             me._addServiceLinks(block);
 
-            var content = $blockElement.html();
-            var url = me._generatePlantuml(content);
-            console.log('PlantumlParser.renderBlock ' + selector + ' url:' + url);
-            $blockElement.html('<img class="jsf-plantuml" src="' + url + '" id="' + selector + 'Img">');
+            try {
+                var content = $blockElement.html();
+                var url = me._generatePlantuml(content);
+                console.log('PlantumlParser.renderBlock ' + selector + ' url:' + url);
+                $blockElement.html('<img class="jsf-plantuml" src="' + url + '" id="' + selector + 'Img">');
+            } catch (ex) {
+                console.error('PlantumlParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 

@@ -33,7 +33,11 @@ JsHelferlein.MindmapParser = function (appBase) {
         me.$(selector).each(function (i, block) {
             var blockId = me.$(block).attr('id');
             console.log('MindmapParser.renderBlock ' + blockId);
-            me._formatMindmap(block);
+            try {
+                me._formatMindmap(block);
+            } catch (ex) {
+                console.error('MindmapParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 

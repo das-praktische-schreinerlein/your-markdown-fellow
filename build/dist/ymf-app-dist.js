@@ -1218,7 +1218,11 @@ JsHelferlein.ChecklistParser = function (appBase) {
     me.renderBlock = function (selector, force) {
         me.$(selector).each(function (i, block) {
             console.log('ChecklistParser.renderBlock ' + selector);
-            me._highlightCheckList(block, force);
+            try {
+                me._highlightCheckList(block, force);
+            } catch (ex) {
+                console.error('ChecklistParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 
@@ -1404,35 +1408,39 @@ JsHelferlein.ImageSlimboxParser = function (appBase) {
                 $(this).removeAttr('onclick');
             });
 
-            // an Lightbox anfuegen
-            $imageElement.slimbox(
-                {/* Put custom options here */},
-                function(el) {
-                    // read image
-                    var img = el;
+            try {
+                // an Lightbox anfuegen
+                $imageElement.slimbox(
+                    {/* Put custom options here */},
+                    function(el) {
+                        // read image
+                        var img = el;
 
-                    var url = img.src;
-                    if (! url) {
-                        return null;
+                        var url = img.src;
+                        if (! url) {
+                            return null;
+                        }
+
+                        var desc = img.getAttribute('diadesc');
+                        if (! desc) {
+                            desc = img.alt;
+                        }
+
+                        return [url, desc];
+                    },
+                    function(el) {
+                        var img = el;
+
+                        var url = img.src;
+                        if (! url) {
+                            return false;
+                        }
+                        return true;
                     }
-
-                    var desc = img.getAttribute('diadesc');
-                    if (! desc) {
-                        desc = img.alt;
-                    }
-
-                    return [url, desc];
-                },
-                function(el) {
-                    var img = el;
-
-                    var url = img.src;
-                    if (! url) {
-                        return false;
-                    }
-                    return true;
-                }
-            );
+                );
+            } catch (ex) {
+                console.error('ImageSlimboxParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 
@@ -1548,7 +1556,11 @@ JsHelferlein.MindmapParser = function (appBase) {
         me.$(selector).each(function (i, block) {
             var blockId = me.$(block).attr('id');
             console.log('MindmapParser.renderBlock ' + blockId);
-            me._formatMindmap(block);
+            try {
+                me._formatMindmap(block);
+            } catch (ex) {
+                console.error('MindmapParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 
@@ -1643,10 +1655,14 @@ JsHelferlein.PlantumlParser = function (appBase) {
 
             me._addServiceLinks(block);
 
-            var content = $blockElement.html();
-            var url = me._generatePlantuml(content);
-            console.log('PlantumlParser.renderBlock ' + selector + ' url:' + url);
-            $blockElement.html('<img class="jsf-plantuml" src="' + url + '" id="' + selector + 'Img">');
+            try {
+                var content = $blockElement.html();
+                var url = me._generatePlantuml(content);
+                console.log('PlantumlParser.renderBlock ' + selector + ' url:' + url);
+                $blockElement.html('<img class="jsf-plantuml" src="' + url + '" id="' + selector + 'Img">');
+            } catch (ex) {
+                console.error('PlantumlParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 
@@ -1765,7 +1781,11 @@ JsHelferlein.SyntaxHighlighterParser = function (appBase) {
             $blockElement.attr('data-syntaxhighlight-processed', true);
 
             console.log('SyntaxHighlighterParser.renderBlock ' + blockId);
-            hljs.highlightBlock(block);
+            try {
+                hljs.highlightBlock(block);
+            } catch (ex) {
+                console.error('SyntaxHighlighterParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 

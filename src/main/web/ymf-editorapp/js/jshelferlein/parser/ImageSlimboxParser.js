@@ -43,35 +43,39 @@ JsHelferlein.ImageSlimboxParser = function (appBase) {
                 $(this).removeAttr('onclick');
             });
 
-            // an Lightbox anfuegen
-            $imageElement.slimbox(
-                {/* Put custom options here */},
-                function(el) {
-                    // read image
-                    var img = el;
+            try {
+                // an Lightbox anfuegen
+                $imageElement.slimbox(
+                    {/* Put custom options here */},
+                    function(el) {
+                        // read image
+                        var img = el;
 
-                    var url = img.src;
-                    if (! url) {
-                        return null;
+                        var url = img.src;
+                        if (! url) {
+                            return null;
+                        }
+
+                        var desc = img.getAttribute('diadesc');
+                        if (! desc) {
+                            desc = img.alt;
+                        }
+
+                        return [url, desc];
+                    },
+                    function(el) {
+                        var img = el;
+
+                        var url = img.src;
+                        if (! url) {
+                            return false;
+                        }
+                        return true;
                     }
-
-                    var desc = img.getAttribute('diadesc');
-                    if (! desc) {
-                        desc = img.alt;
-                    }
-
-                    return [url, desc];
-                },
-                function(el) {
-                    var img = el;
-
-                    var url = img.src;
-                    if (! url) {
-                        return false;
-                    }
-                    return true;
-                }
-            );
+                );
+            } catch (ex) {
+                console.error('ImageSlimboxParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 

@@ -40,7 +40,11 @@ JsHelferlein.SyntaxHighlighterParser = function (appBase) {
             $blockElement.attr('data-syntaxhighlight-processed', true);
 
             console.log('SyntaxHighlighterParser.renderBlock ' + blockId);
-            hljs.highlightBlock(block);
+            try {
+                hljs.highlightBlock(block);
+            } catch (ex) {
+                console.error('SyntaxHighlighterParser.renderBlock error:' + ex, ex);
+            }
         });
     };
 
