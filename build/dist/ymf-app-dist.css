@@ -308,6 +308,16 @@ div.jsh-mermaid {
     background-color: #cbe8f6;
 }
 
+.jsh-md-boxlayout-smallcard {
+    clear: none;
+    width: 300px;
+}
+
+.jsh-md-boxlayout-mediumcard {
+    clear: none;
+    width: 500px;
+}
+
 /*****************************************
  * colors
  *****************************************/
@@ -381,6 +391,15 @@ li.jsh-md-no-list-bullet {
     margin-left: 10px;
 }
 
+li.jsh-md-list-vertical {
+    border-bottom: 0 none;
+    border-right: 1px dotted #008000;
+    border-top: 0 none;
+    height: auto;
+    list-style: outside none none;
+    margin: 0;
+    width: 100%;
+}
 li.jsh-md-list-horiz {
     border-bottom: 0 none;
     border-right: 1px dotted #008000;

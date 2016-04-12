@@ -77,6 +77,16 @@
     background-color: #cbe8f6;
 }
 
+.jsh-md-boxlayout-smallcard {
+    clear: none;
+    width: 300px;
+}
+
+.jsh-md-boxlayout-mediumcard {
+    clear: none;
+    width: 500px;
+}
+
 /*****************************************
  * colors
  *****************************************/

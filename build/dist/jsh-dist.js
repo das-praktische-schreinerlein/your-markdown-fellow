@@ -4329,7 +4329,7 @@ JsHelferlein.DataUtils = function (appBase) {
      * @param {int} number     number to format
      * @param {int} nachkomma  
      * @param {string} suffix  suffix behind number
-     * @return {string}        padded number 13,6 -> 000013
+     * @return {string}        padded number 13,6 -> 13,60000
      */
     me.formatNumbers = function (number, nachkomma, suffix) {
         if (me.isUndefinedStringValue(number)) {

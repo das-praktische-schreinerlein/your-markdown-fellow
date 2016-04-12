@@ -36,7 +36,7 @@ Ymf.MarkdownEditorController = function (appBase, config) {
      */
     me._init = function () {
         me.orientation = 'free';
-        me.wordwrap = false;
+        me.wordwrap = true;
         me.prepareWidgets();
     };
 
