@@ -52,7 +52,7 @@ JsHelferlein.Renderer = function (appBase) {
                 // mermaid: no highlight
                 console.log('runAllRendererOnBlock mermaid descBlock: ' + descBlockId + ' block: ' + blockId);
                 svcMermaidParser.renderBlock(block);
-            } else {
+            } else if (!$blockElement.hasClass('lang-nocode') && !$blockElement.hasClass('nocode')) {
                 // do highlight
                 console.log('runAllRendererOnBlock highlight descBlock: ' + descBlockId + ' block: ' + blockId);
                 svcSyntaxHighlighterParser.renderBlock(block);
