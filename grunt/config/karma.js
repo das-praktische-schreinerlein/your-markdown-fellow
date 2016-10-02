@@ -12,7 +12,7 @@
         },
         coverage: {
             singleRun: true,
-            configFile: 'karma.coverage.ymf.conf.js',
+            configFile: 'karma.coverage.ymf.conf.js'
         },
         // testmodus: continous
         continuous: {
