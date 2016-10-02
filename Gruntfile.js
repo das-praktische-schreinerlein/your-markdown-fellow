@@ -192,9 +192,10 @@
         grunt.registerTask('vendorsfull',  ['clean:bower', 'bower', 'vendorslocal']);
         grunt.registerTask('distymf',      ['images', 'concat', 'copy:ymfres2dist', 'replace:noVersionOnDist', 'copy:dist2archiv']);
         grunt.registerTask('distlocal',    ['vendorslocal', 'copy:vendors2dist', 'copy:vendors2distWithoutVersion', 'distymf']);
-        grunt.registerTask('distfull',     ['vendorsfull', 'clean:dist', 'copy:archiv2dist', 'images', 'concat', 'copy:vendors2dist', 'copy:vendors2distWithoutVersion', 'copy:ymfres2dist', 'replace:noVersionOnDist', 'copy:dist2archiv']);
         grunt.registerTask('distversioned', ['vendorsfull', 'clean:dist', 'copy:archiv2dist', 'images', 'concat', 'copy:vendors2dist', 'copy:vendors2distWithoutVersion', 'copy:ymfres2dist', 'replace:versionOnDist', 'copy:dist2archiv']);
+        grunt.registerTask('distfull',     ['vendorsfull', 'clean:dist', 'copy:archiv2dist', 'images', 'concat', 'copy:vendors2dist', 'copy:vendors2distWithoutVersion', 'copy:ymfres2dist', 'replace:noVersionOnDist', 'copy:dist2archiv', 'karma:unit', 'coverage', 'jshint']);
         grunt.registerTask('dist',         ['distfull']);
+        grunt.registerTask('coverage',     ['karma:coverage']);
         grunt.registerTask('unit-test',    ['dist', 'karma:continuous:start', 'watch:karma']);
         grunt.registerTask('e2e-test',     ['dist', 'protractor:continuous', 'watch:protractor']);
 

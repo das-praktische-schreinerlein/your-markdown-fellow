@@ -1,6 +1,7 @@
 /.idea
 /.settings
 /bower
+/coverage
 /node
 /node_modules
 /src/main/generated-resources
