@@ -139,8 +139,9 @@ JsHelferlein.SpeechSynthController = function (appBase, config) {
                         selected = ' selected ';
                     }
                     svcLogger.logDebug('_initVoices add voice:' + voicesAvailable[i].name);
-                    select += '<option value="' + voicesAvailable[i].lang + '"' +
-                        'data-voice-uri="' + voicesAvailable[i].voiceURI + '"' + selected + '>' +
+                    select += '<option value="' + voicesAvailable[i].lang + '" ' +
+                        'data-voice-uri="' + voicesAvailable[i].voiceURI + '" ' +
+                        'data-name="' + voicesAvailable[i].name + '" ' + selected + '>' +
                         voicesAvailable[i].name +
                         (voicesAvailable[i].default ? ' (default)' : '') + '</option>';
                 }
@@ -193,8 +194,15 @@ JsHelferlein.SpeechSynthController = function (appBase, config) {
         var rate = parseFloat(me.$rate.val());
         var pitch = parseFloat(me.$pitch.val());
         svcLogger.logDebug('_createSpeaker voice:' + $selectedVoice.attr('data-voice-uri') + ' rate:' + rate + ' pitch:' + pitch);
-        msg.voice = $selectedVoice.attr('data-voice-uri'); // Note: some voices don't support altering params
-        msg.voiceURI = 'native';
+        var voicesAvailable = speechSynthesis.getVoices();
+        if (voicesAvailable.length !== 0) {
+            for (var i = 0; i < voicesAvailable.length; i++) {
+                if (voicesAvailable[i].voiceURI === $selectedVoice.attr('data-voice-uri')) {
+                    msg.voice = voicesAvailable[i];
+                    msg.voiceURI = voicesAvailable[i].voiceURI;
+                }
+            }
+        }
         msg.lang = $selectedVoice.val();
         msg.volume = 1; // 0 to 1
         msg.rate = rate; // 0.1 to 10
