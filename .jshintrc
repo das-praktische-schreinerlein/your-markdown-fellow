@@ -100,6 +100,7 @@
         "Lang": true,
         "marked": true,
         "mermaid": true,
+        "SpeechRecognition": true,
         "speechSynthesis": true,
         "SpeechSynthesisUtterance": true,
         "toastr": true,
