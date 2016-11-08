@@ -910,13 +910,34 @@ a.jsh-toggler-hidden {
     margin-right: auto;
 }
 
-#ymf-wysiwyg-editor {
+#ymf-wysiwyg-editor-container {
+    width: 570px;
+    overflow: auto;
+    margin: 0;
     float: left;
+}
+
+#ymf-wysiwyg-editor {
     width: 570px;
     height: 600px;
     max-height: 600px;
     overflow: auto;
     margin: 0;
+}
+
+#ymf-wysiwyg-editor-toolbar {
+    width: 96%;
+    overflow: auto;
+    margin: 0;
+}
+
+#ymf-wysiwyg-editor-toolbar div{
+    display: inline-block;
+}
+
+.ymf-toolbar-btn {
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #ymf-wysiwyg-box {
