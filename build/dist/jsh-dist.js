@@ -2558,7 +2558,7 @@ JsHelferlein.SpeechRecognitionBox = function (appBase, config) {
     var defaultConfig = new JsHelferlein.ConfigBase();
     defaultConfig.contentId = 'jsh-speechrecognition-box';
     defaultConfig.content = '<div class="jsh-box jsh-hide-if-speechrecognition">' +
-        '    <div id="info">Leider unterstützt Ihr Browser keine SpracheGenerierung :-(</div>' +
+        '    <div id="info">Leider unterstützt Ihr Browser keine Spracherkennung :-(</div>' +
         '</div>' +
         '<div class="jsh-box jsh-show-if-speechrecognition">' +
         '    <div id="jsh-sr-info-div">' +
@@ -2810,7 +2810,12 @@ JsHelferlein.SpeechRecognitionController = function (appBase, config) {
      */
     me._initRecognition = function () {
         // Erkennung aktivieren
-        me.recognition = new webkitSpeechRecognition();
+        me.recognition = undefined;
+        if ('webkitSpeechRecognition' in window) {
+            me.recognition = new webkitSpeechRecognition();
+        } else {
+            me.recognition = new SpeechRecognition();
+        }
 
         // Diktat aktivieren: fuehrt nach Pause fort
         me.recognition.continuous = true;
@@ -2982,7 +2987,7 @@ JsHelferlein.SpeechRecognitionDetector = function (appBase, config) {
      */
     me.isSpeechRecognitionSupported = function () {
         try {
-            if ('webkitSpeechRecognition' in window) {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 return true;
             }
         } catch (ex) {
