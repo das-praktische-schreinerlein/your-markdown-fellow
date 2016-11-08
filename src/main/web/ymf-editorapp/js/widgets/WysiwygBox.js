@@ -29,7 +29,11 @@ Ymf.WysiwygBox = function (appBase, config) {
     // configure
     var defaultConfig = new JsHelferlein.ConfigBase();
     defaultConfig.contentId = 'ymf-wysiwyg-box';
-    defaultConfig.content = '<pre id="ymf-wysiwyg-editor" class="container-wyswhg-editor"></pre>' +
+    defaultConfig.toolbarId = 'ymf-wysiwyg-editor-toolbar';
+    defaultConfig.content = '<div id="ymf-wysiwyg-editor-container" class="container-wysiwyg-editor">' +
+        '  <div id="ymf-wysiwyg-editor-toolbar" class="container-wysiwyg-editor-toolbar"></div>' +
+        '  <pre id="ymf-wysiwyg-editor" class="wysiwyg-editor"></pre>' +
+        '</div>' +
         '  <div id="ymf-wysiwyg-previewcontainer" class="container-wysiwyg-previewcontainer">' +
         '    <div id="ymf-wysiwyg-preview" class="container-wysiwyg-preview"></div>' +
         '  </div>' +

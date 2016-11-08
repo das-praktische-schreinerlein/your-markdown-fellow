@@ -49,6 +49,9 @@ window.YmfAppBase = function () {
         me.configureService('Ymf.MarkdownEditorController', function () {
             return Ymf.MarkdownEditorController(me);
         });
+        me.configureService('Ymf.MarkdownEditorFactory', function () {
+            return Ymf.MarkdownEditorFactory(me);
+        });
 
         // aliases
         me.configureService('YmfMarkdownEditorServiceHelper', function () {
@@ -65,6 +68,9 @@ window.YmfAppBase = function () {
         });
         me.configureService('YmfMarkdownEditorController', function () {
             return me.get('Ymf.MarkdownEditorController');
+        });
+        me.configureService('YmfMarkdownEditorFactory', function () {
+            return me.get('Ymf.MarkdownEditorFactory');
         });
     };
 

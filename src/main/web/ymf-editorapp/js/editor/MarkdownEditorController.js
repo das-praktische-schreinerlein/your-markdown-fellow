@@ -67,14 +67,6 @@ Ymf.MarkdownEditorController = function (appBase, config) {
     };
 
     /**
-     * open the speechRecognition-box with the content of element with id:textAreaId
-     * @param {string} textAreaId       id of the element to get/set content
-     */
-    me.openSpeechRecognitionForElement = function (textAreaId) {
-        me.appBase.SpeechRecognitionController.open(textAreaId);
-    };
-
-    /**
      * open the preview-box with the rendered markdown from the content of element with id:textAreaId
      * @param {string} textAreaId       id of the element to get content
      */
@@ -124,6 +116,7 @@ Ymf.MarkdownEditorController = function (appBase, config) {
 
         // create  Editor
         var editor = me.createMarkdownEditorForTextarea(myParentId, textAreaId);
+        me.appBase.YmfMarkdownEditorFactory.createEditorToolbar(editor, '#' + me.wysiwygWidget.config.toolbarId);
 
         // reset intervallHandler for this parent
         var intervalHandler = me.$('#' + myParentId).data('aceEditor.intervalHandler');
@@ -233,37 +226,10 @@ Ymf.MarkdownEditorController = function (appBase, config) {
      * create ace-editor on element parentId with markdown-syntax, synchronized with textarea
      * @param {string} parentId         id of the element to append the editor
      * @param {string} textAreaId       id of the element to get content and synchronize
+     * @returns {ace.Editor} instance of an ace-editor
      */
     me.createMarkdownEditorForTextarea = function (parentId, textAreaId) {
-        var editor = ace.edit(parentId);
-
-        // configure
-        editor.setTheme('ace/theme/textmate');
-
-        editor.getSession().setTabSize(4);
-        editor.getSession().setUseSoftTabs(true);
-        editor.getSession().setMode('ace/mode/markdown');
-        editor.setHighlightActiveLine(true);
-        editor.setShowPrintMargin(true);
-
-        // options from http://ace.c9.io/build/kitchen-sink.html
-        // editor.setShowFoldWidgets(value !== 'manual');
-        // editor.setOption('wrap', 'free');
-        // editor.setOption('selectionStyle', checked ? 'line' : 'text');
-        editor.setShowInvisibles(true);
-        editor.setDisplayIndentGuides(true);
-        editor.setPrintMarginColumn(80);
-        editor.setShowPrintMargin(true);
-        editor.setHighlightSelectedWord(true);
-        // editor.setOption('hScrollBarAlwaysVisible', checked);
-        // editor.setOption('vScrollBarAlwaysVisible', checked);
-        editor.setAnimatedScroll(true);
-        // editor.setBehavioursEnabled(checked);
-        // editor.setFadeFoldWidgets(true);
-        // editor.setOption('spellcheck', true);
-        //https://github.com/swenson/ace_spell_check_js
-        //https://github.com/cfinke/Typo.js#f399cf7191c4cb9a1fc55400a1a850367e8d6eb4
-        editor.getSession().setUseWrapMode(me.wordwrap);
+        var editor = me.appBase.YmfMarkdownEditorFactory.createMarkdownEditor(parentId);
 
         // set value
         editor.setValue(me.$('#' + textAreaId).val());
@@ -335,18 +301,23 @@ Ymf.MarkdownEditorController = function (appBase, config) {
      */
     me._resizeWysiwygEditor = function () {
         var $parent = me.$('#ymf-wysiwyg-box');
+        var $editorContainer = me.$('#ymf-wysiwyg-editor-container');
         var $editor = me.$('#ymf-wysiwyg-editor');
+        var $toolbar = me.$('#ymf-wysiwyg-editor-toolbar');
         var $previewcontainer = me.$('#ymf-wysiwyg-previewcontainer');
         var $preview = me.$('#ymf-wysiwyg-preview');
 
         var height = $parent.innerHeight();
+        var toolbarHeight = $toolbar.innerHeight();
         var scrollbarHeight = 30;
         var containerPuffer = 10;
 
-        $editor.css('width', '48%');
+        $editor.css('width', '96%');
         $previewcontainer.css('width', '48%');
-        $editor.css('height', (height - scrollbarHeight).toString() + 'px');
-        $editor.css('max-height', (height - scrollbarHeight).toString() + 'px');
+        $editorContainer.css('width', '48%');
+
+        $editor.css('height', (height - scrollbarHeight - toolbarHeight).toString() + 'px');
+        $editor.css('max-height', (height - scrollbarHeight - toolbarHeight).toString() + 'px');
         $previewcontainer.css('height', (height - containerPuffer).toString() + 'px');
         $preview.css('height', (height - scrollbarHeight).toString() + 'px');
 
