@@ -23,9 +23,14 @@ cd your-markdown-fellow
 npm install
 grunt dist
 ```
+- configure devserver in Gruntfile.js
+```
+    var devserverPort = 8501;
+```
 - start
 ```
-firefox build/ymf-editorapp/ymf-editorapp.html
+grunt devserver
+firefox http://localhost:5801
 ```
 
 ## Use it in own projects 

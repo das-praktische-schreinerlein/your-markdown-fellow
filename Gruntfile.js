@@ -35,6 +35,7 @@
     var vendorDestBase = 'vendors/';
     var archivSrcBase = 'vendors/archiv/';
     var testSrcBase = 'src/test/javascript/';
+    var devserverPort = 8501;
 
     /**
      * configure tasks
@@ -56,6 +57,7 @@
                 vendorDestBase: vendorDestBase,
                 archivSrcBase: archivSrcBase,
                 testSrcBase: testSrcBase,
+                devserverPort: devserverPort,
 
                 // define files
                 vendorJsFiles: [
@@ -198,10 +200,12 @@
         grunt.registerTask('coverage',     ['karma:coverage']);
         grunt.registerTask('unit-test',    ['dist', 'karma:continuous:start', 'watch:karma']);
         grunt.registerTask('e2e-test',     ['dist', 'protractor:continuous', 'watch:protractor']);
+        grunt.registerTask('devserver',    ['connect:devserver']);
 
         // load grunt tasks
         grunt.loadNpmTasks('grunt-bower-task');
         grunt.loadNpmTasks('grunt-css-image');
+        grunt.loadNpmTasks('grunt-connect');
         grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-concat');
