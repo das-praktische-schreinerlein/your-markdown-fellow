@@ -32,7 +32,7 @@ JsHelferlein.SpeechRecognitionDetector = function (appBase, config) {
      */
     me.isSpeechRecognitionSupported = function () {
         try {
-            if ('webkitSpeechRecognition' in window) {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 return true;
             }
         } catch (ex) {

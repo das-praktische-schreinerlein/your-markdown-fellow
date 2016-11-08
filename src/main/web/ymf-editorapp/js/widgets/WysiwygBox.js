@@ -123,7 +123,6 @@ Ymf.WysiwygBox = function (appBase, config) {
                         me.appBase.YmfMarkdownEditorController.openSpeechSynthForElement('ymf-wysiwyg-preview');
                     }
                 },
-/**
                 'Spracherkennung': {
                     id: 'Spracherkennung',
                     text: 'Spracherkennung',
@@ -132,7 +131,6 @@ Ymf.WysiwygBox = function (appBase, config) {
                         me.appBase.YmfMarkdownEditorController.openSpeechRecognitionForElement(me.config.textAreaId);
                     }
                 },
-**/
                 'Load...': function () {
                     me.fileLoadDialog.config.myParentId = me.config.myParentId;
                     me.fileLoadDialog.config.editor = me.config.editor;

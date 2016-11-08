@@ -28,7 +28,7 @@ JsHelferlein.SpeechRecognitionBox = function (appBase, config) {
     var defaultConfig = new JsHelferlein.ConfigBase();
     defaultConfig.contentId = 'jsh-speechrecognition-box';
     defaultConfig.content = '<div class="jsh-box jsh-hide-if-speechrecognition">' +
-        '    <div id="info">Leider unterstützt Ihr Browser keine SpracheGenerierung :-(</div>' +
+        '    <div id="info">Leider unterstützt Ihr Browser keine Spracherkennung :-(</div>' +
         '</div>' +
         '<div class="jsh-box jsh-show-if-speechrecognition">' +
         '    <div id="jsh-sr-info-div">' +

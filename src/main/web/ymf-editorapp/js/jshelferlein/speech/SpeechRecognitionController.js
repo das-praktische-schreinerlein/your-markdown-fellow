@@ -157,7 +157,12 @@ JsHelferlein.SpeechRecognitionController = function (appBase, config) {
      */
     me._initRecognition = function () {
         // Erkennung aktivieren
-        me.recognition = new webkitSpeechRecognition();
+        me.recognition = undefined;
+        if ('webkitSpeechRecognition' in window) {
+            me.recognition = new webkitSpeechRecognition();
+        } else {
+            me.recognition = new SpeechRecognition();
+        }
 
         // Diktat aktivieren: fuehrt nach Pause fort
         me.recognition.continuous = true;

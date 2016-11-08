@@ -54,7 +54,7 @@ Ymf.MarkdownEditorController = function (appBase, config) {
      * open the speechRecognition-box with the content of element with id:textAreaId, result will be saved back to the element
      * @param {string} textAreaId       id of the element to get/ser content
      */
-    me.openSpeechReconitionForElement = function (textAreaId) {
+    me.openSpeechRecognitionForElement = function (textAreaId) {
         me.appBase.SpeechRecognitionController.open(textAreaId);
     };
 
@@ -242,6 +242,7 @@ Ymf.MarkdownEditorController = function (appBase, config) {
 
         // set editor as data-attr on parent
         me.$('#' + parentId).data('aceEditor', editor);
+        me.$('#' + textAreaId).data('aceEditor', editor);
 
         return editor;
     };
@@ -313,8 +314,8 @@ Ymf.MarkdownEditorController = function (appBase, config) {
         var containerPuffer = 10;
 
         $editor.css('width', '96%');
-        $previewcontainer.css('width', '48%');
-        $editorContainer.css('width', '48%');
+        $previewcontainer.css('width', '49%');
+        $editorContainer.css('width', '49%');
 
         $editor.css('height', (height - scrollbarHeight - toolbarHeight).toString() + 'px');
         $editor.css('max-height', (height - scrollbarHeight - toolbarHeight).toString() + 'px');
