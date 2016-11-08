@@ -5688,6 +5688,9 @@ Ymf.MarkdownEditorFactory = function (appBase, config) {
      * @param containerSelector
      */
     me.createEditorToolbar = function (editor, containerSelector) {
+        // clear toolbar
+        me.$(containerSelector).find('.ymf-toolbar').remove();
+
         var html = '';
         html += '<div class="ymf-toolbar">';
 
